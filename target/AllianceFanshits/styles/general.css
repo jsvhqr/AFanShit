@@ -1,0 +1,7 @@
+
+body, html, .ng-scope, .container-fluid, .row, .col-md-4 { /// take all available height
+  margin: 0;
+  height: 100%;
+  
+}
+

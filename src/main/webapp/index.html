@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome Alliance Fanshits</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/general.css">
+    </head>
+    <body ng-app="AllianceFanshits">
+
+        <nav class="navbar navbar-inverse nav" style="margin-bottom: 0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#/" style="text-decoration: none; color: #fff"><h1 style="font-family: Luckiest Guy;">Information for us F[A]nshits</h1></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a  href="#/Akke"><img src="https://static-cdn.jtvnw.net/emoticons/v1/55338/1.0"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#/Bulldog"><img src="https://static-cdn.jtvnw.net/emoticons/v1/33/1.0"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#/EGM"><img src="https://static-cdn.jtvnw.net/emoticons/v1/71/1.0"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#/Loda"><img src="https://static-cdn.jtvnw.net/emoticons/v1/3666/1.0"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#/s4">s <img src="https://static-cdn.jtvnw.net/emoticons/v1/356/1.0"></a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+
+
+            </div>
+        </nav>
+
+        <div ng-view=""></div>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="scripts/modules/AllianceFanshitsMainModule.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/ngtweet/dist/ngtweet.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="scripts/services/DotaApiService.js" ></script>
+        <script src="scripts/controllers/DotaMatchController.js"></script>
+       
+        
+        <script src="scripts/controllers/HomeCtrl.js"></script>
+    </body>
+</html>
