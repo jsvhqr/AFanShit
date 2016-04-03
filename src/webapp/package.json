@@ -1,0 +1,10 @@
+{
+  "name"         : "AllianceFanshits",
+  "version"      : "0.0.0",
+  "description"  : "Simple fanshit site",
+  "main"         : "node/WebServer.js",
+  "author"       : "Johan Svedlund Nordström",
+  "dependencies" : {
+    "express"    : "~4.7.2"
+    }
+}
