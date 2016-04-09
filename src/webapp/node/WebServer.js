@@ -28,7 +28,7 @@ app.get("/matchHistory/:member", function (req, res) {
     var memberreq = req.getParameter("member");
 
     if(memberreq === 'Loda'){
-
+        
     }else if(memberreq === 's4'){
 
     }else if(memberreq === 'AdmiralBulldog'){

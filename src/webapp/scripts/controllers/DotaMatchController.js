@@ -3,7 +3,7 @@
  */
 
 
-angular.module('AllianceFanshits').controller('HomeController',['$routeParams','DotaApiService',function($routeParams,DotaApiService){
+angular.module('AllianceFanshits').controller('DotaMatchController',['$routeParams','DotaApiService',function($routeParams,DotaApiService){
 
     var self = this;
 
