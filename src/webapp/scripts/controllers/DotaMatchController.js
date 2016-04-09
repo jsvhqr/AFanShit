@@ -3,13 +3,13 @@
  */
 
 
-angular.module('AllianceFanshits').controller('DotaMatchController',['$routeParams','DotaApiService',function($routeParams,DotaApiService){
+angular.module('AllianceFanshits').controller('DotaMatchController',[,'DotaApiService',function($routeParams,DotaApiService){
 
     var self = this;
 
-    self.getMatchHistory = function($routeParams){
+    self.getMatchHistory = function(teamMember){
 
-        return DotaApiService.query($routeParams.teamMember);
+        return DotaApiService.query(teamMember);
 
     }
 

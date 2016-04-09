@@ -29,7 +29,7 @@
                 </div>   
         </div>
         <div class="col-md-4 jumbotron text-center" ng-controller="DotaMatchController as dmController">
-            {{dmController.getMatchHistory()}}
+            {{dmController.getMatchHistory(homeController.currentMember);}}
          </div>
          <div class="col-md-4 jumbotron text-center">
              <h3>Stream</h3>
