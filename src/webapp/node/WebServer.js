@@ -28,15 +28,15 @@ app.get("api/matchHistory/:member", function (req, res) {
     var memberreq = req.getParameter("member");
 
     if(memberreq === 'Loda'){
-        
+        res.send("LodaHistory");
     }else if(memberreq === 's4'){
-
+        res.send("s4History");
     }else if(memberreq === 'AdmiralBulldog'){
-
+        res.send("AdmiralBulldogHistory");
     }else if(memberreq === 'Akke'){
-
+        res.send("AkkeHistory");
     }else if(memberreq === 'EGM'){
-
+        res.send("EGMHistory");
     }
 });
 
