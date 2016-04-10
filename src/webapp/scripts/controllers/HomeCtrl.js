@@ -5,10 +5,9 @@
  */
 
 
-angular.module('AllianceFanshits').controller('HomeController',['$routeParams',function($routeParams){
+angular.module('AllianceFanshits').controller('HomeController',[function(){
 
         var self = this;
         self.upcommingGames = 0;
-        self.currentMember = $routeParams.teamMember;
 
 }]);

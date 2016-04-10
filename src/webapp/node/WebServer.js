@@ -23,7 +23,7 @@ app.get(/^(.+)$/, function (req, res) {
     res.sendfile(path.resolve('..') + req.params[0]);
 });
 
-app.get("/matchHistory/:member", function (req, res) {
+app.get("api/matchHistory/:member", function (req, res) {
     console.log('request for : ' + req.getParameter("member") + " matchhistory" );
     var memberreq = req.getParameter("member");
 

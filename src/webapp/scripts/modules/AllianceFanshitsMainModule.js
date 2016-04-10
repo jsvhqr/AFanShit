@@ -16,7 +16,7 @@ app.config(['$routeProvider',
       }).
       when('/:teamMember', {
         templateUrl: 'views/TeamMemberView.html',
-        controller : 'HomeController as homeController'
+        controller : 'MemberController as memberController'
       }).     
       otherwise({
         redirectTo: 'views/home.html'

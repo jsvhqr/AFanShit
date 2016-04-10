@@ -2,34 +2,34 @@
 <div class="containe-fluid">
     <div class="row">
         <div class="col-md-4 jumbotron text-center">
-            <div class="container-fluid" ng-if="homeController.currentMember === 'Loda'">
+            <div class="container-fluid" ng-if="memberController.currentMember === 'Loda'">
                     <twitter-timeline>
                         <a class="twitter-timeline" data-widget-id="701022336242294784"> </a>
                     <twitter-timeline> 
                 </div>
-                <div class="container-fluid" ng-if="homeController.currentMember === 'Akke'">
+                <div class="container-fluid" ng-if="memberController.currentMember === 'Akke'">
                     <twitter-timeline>
                         <a class="twitter-timeline" data-widget-id="701044645627879424"> </a>
                     <twitter-timeline> 
                 </div>
-                <div class="container-fluid" ng-if="homeController.currentMember === 'Bulldog'">
+                <div class="container-fluid" ng-if="memberController.currentMember === 'Bulldog'">
                     <twitter-timeline>
                         <a class="twitter-timeline" data-widget-id="701044916693168129"> </a>
                     <twitter-timeline> 
                 </div>
-                <div class="container-fluid" ng-if="homeController.currentMember === 'EGM'">
+                <div class="container-fluid" ng-if="memberController.currentMember === 'EGM'">
                     <twitter-timeline>
                         <a class="twitter-timeline" data-widget-id="701044479969644544"> </a>
                     <twitter-timeline> 
                 </div>
-                <div class="container-fluid" ng-if="homeController.currentMember === 's4'">
+                <div class="container-fluid" ng-if="memberController.currentMember === 's4'">
                     <twitter-timeline>
                         <a class="twitter-timeline" data-widget-id="701044800032792576"> </a>
                     <twitter-timeline> 
                 </div>   
         </div>
-        <div class="col-md-4 jumbotron text-center" ng-controller="DotaMatchController as dmController">
-            {{dmController.getMatchHistory(homeController.currentMember);}}
+        <div class="col-md-4 jumbotron text-center">
+            {{memberController.matchHistory}}
          </div>
          <div class="col-md-4 jumbotron text-center">
              <h3>Stream</h3>
