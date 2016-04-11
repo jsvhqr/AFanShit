@@ -11,15 +11,15 @@ var akkeKey = "41288955";
 var request = require('request');
 var heroes = new Array();
 require('./classes/Hero.js');
-require('./classes/MatchObject.js');
+require('./classes/MatchObj.js');
 
 function init(heros) {
     request(steamBaseUri + "/IEconDOTA2_570/GetHeroes/v001/?key=" + steamkey + "&language=english", function (error, response, body) {
         if (!error && response.statusCode === 200) {
             var jsonHeros = JSON.parse(body);
-            for (var i = 0; i < jsonHeros.heroes.length; i++) {
-                console.log("Added new hero to memorydb: name " + jsonHeros.heroes[i].name + " id: " + jsonHeros.heroes[i].id);
-                var hero = new Hero(jsonHeros.heroes[i].id, jsonHeros.heroes[i].name);
+            for (var i = 0; i < jsonHeros.result.heroes.length; i++) {
+                console.log("Added new hero to memorydb: name " + jsonHeros.result.heroes[i].name + " id: " + jsonHeros.result.heroes[i].id);
+                var hero = new Hero(jsonHeros.result.heroes[i].id, jsonHeros.result.heroes[i].name);
                 heros.push(hero);
             }
         }
@@ -58,7 +58,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 var matches_info = new Array();
-                for (var i = 0; i < jsonMatchHistory.matches.length; i++) {
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                     var hero;
                     var tournamentGame;
@@ -66,15 +66,15 @@ app.get("/api/matchHistory/:member", function (req, res) {
 
                     matchid = jsonMatchHistory.matches[i].match_id;
 
-                    if (jsonMatchHistory.matches[i].lobby_type === 2) {
+                    if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
                         tournamentGame = true;
                     } else {
                         tournamentGame = false;
                     }
 
-                    for(var j = 0; j < jsonMatchHistory.matches[i].players.length; j++){
-                        if(jsonMatchHistory.matches[i].players[j].account_id == lodaKey){
-                            hero = getHeroPlayed(jsonMatchHistory.matches[i].players[j].hero_id);
+                    for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
+                        if(jsonMatchHistory.result.matches[i].players[j].account_id == lodaKey){
+                            hero = getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id);
                         }
                     }
                     
@@ -92,23 +92,23 @@ app.get("/api/matchHistory/:member", function (req, res) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 var matches_info = new Array();
-                for (var i = 0; i < jsonMatchHistory.matches.length; i++) {
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                     var hero;
                     var tournamentGame;
                     var matchid;
 
-                    matchid = jsonMatchHistory.matches[i].match_id;
+                    matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                    if (jsonMatchHistory.matches[i].lobby_type === 2) {
+                    if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
                         tournamentGame = true;
                     } else {
                         tournamentGame = false;
                     }
 
-                    for(var j = 0; j < jsonMatchHistory.matches[i].players.length; j++){
+                    for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
                         if(jsonMatchHistory.matches[i].players[j].account_id == s4Key){
-                            hero = getHeroPlayed(jsonMatchHistory.matches[i].players[j].hero_id);
+                            hero = getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id);
                         }
                     }
 
@@ -126,23 +126,23 @@ app.get("/api/matchHistory/:member", function (req, res) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 var matches_info = new Array();
-                for (var i = 0; i < jsonMatchHistory.matches.length; i++) {
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                     var hero;
                     var tournamentGame;
                     var matchid;
 
-                    matchid = jsonMatchHistory.matches[i].match_id;
+                    matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                    if (jsonMatchHistory.matches[i].lobby_type === 2) {
+                    if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
                         tournamentGame = true;
                     } else {
                         tournamentGame = false;
                     }
 
-                    for(var j = 0; j < jsonMatchHistory.matches[i].players.length; j++){
-                        if(jsonMatchHistory.matches[i].players[j].account_id == bulldogKey){
-                            hero = getHeroPlayed(jsonMatchHistory.matches[i].players[j].hero_id);
+                    for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
+                        if(jsonMatchHistory.result.matches[i].players[j].account_id == bulldogKey){
+                            hero = getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id);
                         }
                     }
 
@@ -160,23 +160,23 @@ app.get("/api/matchHistory/:member", function (req, res) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 var matches_info = new Array();
-                for (var i = 0; i < jsonMatchHistory.matches.length; i++) {
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                     var hero;
                     var tournamentGame;
                     var matchid;
 
-                    matchid = jsonMatchHistory.matches[i].match_id;
+                    matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                    if (jsonMatchHistory.matches[i].lobby_type === 2) {
+                    if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
                         tournamentGame = true;
                     } else {
                         tournamentGame = false;
                     }
 
-                    for(var j = 0; j < jsonMatchHistory.matches[i].players.length; j++){
-                        if(jsonMatchHistory.matches[i].players[j].account_id == akkeKey){
-                            hero = getHeroPlayed(jsonMatchHistory.matches[i].players[j].hero_id);
+                    for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
+                        if(jsonMatchHistory.result.matches[i].players[j].account_id == akkeKey){
+                            hero = getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id);
                         }
                     }
 
@@ -194,23 +194,23 @@ app.get("/api/matchHistory/:member", function (req, res) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 var matches_info = new Array();
-                for (var i = 0; i < jsonMatchHistory.matches.length; i++) {
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                     var hero;
                     var tournamentGame;
                     var matchid;
 
-                    matchid = jsonMatchHistory.matches[i].match_id;
+                    matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                    if (jsonMatchHistory.matches[i].lobby_type === 2) {
+                    if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
                         tournamentGame = true;
                     } else {
                         tournamentGame = false;
                     }
 
-                    for(var j = 0; j < jsonMatchHistory.matches[i].players.length; j++){
-                        if(jsonMatchHistory.matches[i].players[j].account_id == egmKey){
-                            hero = getHeroPlayed(jsonMatchHistory.matches[i].players[j].hero_id);
+                    for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
+                        if(jsonMatchHistory.result.matches[i].players[j].account_id == egmKey){
+                            hero = getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id);
                         }
                     }
 
