@@ -6,7 +6,6 @@
 angular.module('AllianceFanshits').factory("DotaApiService",['$resource',function($resource){
 
 
-    return $resource("/api/matchHistory/:member", {
-        member: '@member'});
+    return $resource("/api/matchHistory/:member")
 
 }]);

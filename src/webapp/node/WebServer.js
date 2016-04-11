@@ -18,14 +18,14 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/matchHistory/:member", function (req, res) {
-    console.log('request for : ' + req.getParameter("member") + " matchhistory" );
-    var memberreq = req.getParameter("member");
+    console.log('request for : ' + req.param("member") + " matchhistory" );
+    var memberreq = req.param("member");
 
     if(memberreq === 'Loda'){
         res.send("LodaHistory");
     }else if(memberreq === 's4'){
         res.send("s4History");
-    }else if(memberreq === 'AdmiralBulldog'){
+    }else if(memberreq === 'Bulldog'){
         res.send("AdmiralBulldogHistory");
     }else if(memberreq === 'Akke'){
         res.send("AkkeHistory");
