@@ -3,13 +3,10 @@
  */
 
 
-function MathObject(name, hero, result, description, id) {
-
-    this.name = name;
+function MatchObject(hero, tournamentGame, id) {
     this.hero = hero;
-    this.result = result;
-    this.description = description;
+    this.tournamentGame = TournamentGame;
     this.id = id;
 }
 
-module.exports = MathObject;
+module.exports = MatchObject;
