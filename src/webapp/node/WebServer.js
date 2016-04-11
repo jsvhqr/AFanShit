@@ -18,6 +18,7 @@ function  init(heros) {
         if(!error && response.statusCode === 200){
             var jsonHeros = JSON.parse(body);
             for(var i = 0; i<jsonHeros.heroes.length;i++){
+                console.log("Added new hero to memorydb: name " + jsonHeros.heroes[i].name + " id: " + jsonHeros.heroes[i].id);
                 var hero = new Hero(jsonHeros.heroes[i].id,jsonHeros.heroes[i].name);
                 heros.push(hero);
             }
