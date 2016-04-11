@@ -2,9 +2,13 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var steamkey = "1ED27D8168C151D5FF743AB7FAC2151E";
-var steamBaseUri = "https://api.steampowered.com/IDOTA2Match_570/";
-
-
+var steamBaseUri = "https://api.steampowered.com/";
+var lodaKey = "101495620";
+var s4Key = "41231571";
+var bulldogKey = "76482434";
+var egmKey = "3916428";
+var akkeKey = "41288955";
+var request = require('request');
 
 
 
@@ -22,15 +26,35 @@ app.get("/api/matchHistory/:member", function (req, res) {
     var memberreq = req.param("member");
 
     if(memberreq === 'Loda'){
-        res.send("LodaHistory");
+        request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+lodaKey+"&account_id="+steamkey, function (error,response,body) {
+            if(!error && response.statusCode === 200){
+                res.send(JSON.parse(body));
+            }
+        });
     }else if(memberreq === 's4'){
-        res.send("s4History");
+        request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+s4Key+"&account_id="+steamkey, function (error,response,body) {
+            if(!error && response.statusCode === 200){
+                res.send(JSON.parse(body));
+            }
+        });
     }else if(memberreq === 'Bulldog'){
-        res.send("AdmiralBulldogHistory");
+        request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+bulldogKey+"&account_id="+steamkey, function (error,response,body) {
+            if(!error && response.statusCode === 200){
+                res.send(JSON.parse(body));
+            }
+        });
     }else if(memberreq === 'Akke'){
-        res.send("AkkeHistory");
+        request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+akkeKey+"&account_id="+steamkey, function (error,response,body) {
+            if(!error && response.statusCode === 200){
+                res.send(JSON.parse(body));
+            }
+        });
     }else if(memberreq === 'EGM'){
-        res.send("EGMHistory");
+        request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+egmKey+"&account_id="+steamkey, function (error,response,body) {
+            if(!error && response.statusCode === 200){
+                res.send(JSON.parse(body));
+            }
+        });
     }
 });
 
