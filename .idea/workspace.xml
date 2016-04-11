@@ -4,6 +4,75 @@
     <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node/WebServer.js" afterPath="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws-sign2/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws-sign2/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/pseudomap/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/pseudomap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/node_modules/yallist/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/aws4/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/process-nextick-args/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/util-deprecate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/bl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/caseless/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/caseless/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/combined-stream/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/combined-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/extend/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/extend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/forever-agent/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/forever-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/form-data/node_modules/async/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/form-data/node_modules/async/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/form-data/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/form-data/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/ansi-styles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/escape-string-regexp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/has-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/strip-ansi/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/node_modules/supports-color/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/chalk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/graceful-readlink/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/commander/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/commander/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-function/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/node_modules/is-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/xtend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/node_modules/pinkie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/node_modules/pinkie-promise/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/har-validator/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/boom/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/boom/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/hoek/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/hoek/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/node_modules/sntp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/hawk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/extsprintf/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/json-schema/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/node_modules/verror/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/jsprim/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/node_modules/assert-plus/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/node_modules/assert-plus/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/ecc-jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jodid25519/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/node_modules/sshpk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/http-signature/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/is-typedarray/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/is-typedarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/isstream/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/isstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/json-stringify-safe/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/json-stringify-safe/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/node-uuid/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/node-uuid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/oauth-sign/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/oauth-sign/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/stringstream/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/stringstream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/tough-cookie/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/tough-cookie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/tunnel-agent/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/node_modules/tunnel-agent/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node_modules/request/package.json" afterPath="$PROJECT_DIR$/src/webapp/node_modules/request/package.json" />
     </list>
     <ignored path="AFanShit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +93,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="55" column="104" selection-start-line="55" selection-start-column="104" selection-end-line="55" selection-end-column="104" />
+            <state relative-caret-position="336">
+              <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hero.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchObj.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!doc;n#MathObject#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,7 +128,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/views/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="399">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -132,6 +223,10 @@
         <option value="$PROJECT_DIR$/src/webapp/scripts/modules/config.js" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/services/DotaApiService.js" />
         <option value="module.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/Player.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/Match.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/Hero.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
       </list>
     </option>
@@ -171,11 +266,94 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanShit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,18 +450,19 @@
       <workItem from="1460316248501" duration="5247000" />
       <workItem from="1460357920221" duration="9168000" />
       <workItem from="1460382558972" duration="229000" />
-      <workItem from="1460382805796" duration="935000" />
+      <workItem from="1460382805796" duration="3310000" />
+      <workItem from="1460393748871" duration="6325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20921000" />
+    <option name="totallyTimeSpent" value="29621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="27" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18079096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18079096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -332,35 +511,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/webapp/node/WebServer.js</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -674,29 +829,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/node/rest/matchHistory.js" />
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/HomeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/config.js" />
-    <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
+    <entry file="file://$PROJECT_DIR$/src/webapp/views/TeamMemberView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -709,18 +846,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/views/TeamMemberView.html">
+    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/HomeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="162">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Match.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -735,11 +898,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="55" column="104" selection-start-line="55" selection-start-column="104" selection-end-line="55" selection-end-column="104" />
+        <state relative-caret-position="336">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc;n#MathObject#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

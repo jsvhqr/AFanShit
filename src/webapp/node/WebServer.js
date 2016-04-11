@@ -9,8 +9,32 @@ var bulldogKey = "76482434";
 var egmKey = "3916428";
 var akkeKey = "41288955";
 var request = require('request');
+var heroes = new Array();
+require('./classes/Hero.js');
+require('./classes/MatchObject.js');
 
+function  init(heros) {
+    request(steamBaseUri+"/IEconDOTA2_570/GetHeroes/v001/?key="+steamkey+"&language=english", function (error,response,body) {
+        if(!error && response.statusCode === 200){
+            var jsonHeros = JSON.parse(body);
+            for(var i = 0; i<jsonHeros.heroes.length;i++){
+                var hero = new Hero(jsonHeros.heroes[i].id,jsonHeros.heroes[i].name);
+                heros.push(hero);
+            }
+        }
+    });
+}
 
+init(heroes);
+
+function getHeroPlayed(id) {
+    for(var h in heroes){
+        if(h.id === id){
+            return h.name;
+        }
+    }
+    return "unknown";
+}
 
 app.get("/", function (req, res) {
     var ip = req.headers['x-forwarded-for'] ||
@@ -31,31 +55,37 @@ app.get("/api/matchHistory/:member", function (req, res) {
     if(memberreq === 'Loda'){
         request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+steamkey+"&account_id="+lodaKey, function (error,response,body) {
             if(!error && response.statusCode === 200){
-                res.send(JSON.parse(body));
+                var jsonMatchHistory = JSON.parse(body);
+                var matches_info = new Array();
+                for(var i = 0; i<jsonMatchHistory.matches.length;i++){
+                     var matchid = jsonMatchHistory.matches[i].match_id;
+                     
+                }
+
             }
         });
     }else if(memberreq === 's4'){
         request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+steamkey+"&account_id="+s4Key, function (error,response,body) {
             if(!error && response.statusCode === 200){
-                res.send(JSON.parse(body));
+                var jsonMatchHistory = JSON.parse(body);
             }
         });
     }else if(memberreq === 'Bulldog'){
         request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+steamkey+"&account_id="+bulldogKey, function (error,response,body) {
             if(!error && response.statusCode === 200){
-                res.send(JSON.parse(body));
+                var jsonMatchHistory = JSON.parse(body);
             }
         });
     }else if(memberreq === 'Akke'){
         request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+steamkey+"&account_id="+akkeKey, function (error,response,body) {
             if(!error && response.statusCode === 200){
-                res.send(JSON.parse(body));
+                var jsonMatchHistory = JSON.parse(body);
             }
         });
     }else if(memberreq === 'EGM'){
         request(steamBaseUri+"IDOTA2Match_570/GetMatchHistory/V001/?key="+steamkey+"&account_id="+egmKey, function (error,response,body) {
             if(!error && response.statusCode === 200){
-                res.send(JSON.parse(body));
+                var jsonMatchHistory = JSON.parse(body);
             }
         });
     }
