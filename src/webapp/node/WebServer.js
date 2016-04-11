@@ -85,10 +85,10 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     }
 
                     var json = JSON.stringify(matches_info);
-                    return json;
+                    res.send(json);
                 }
                 else{
-                    res.send(memberreq + " doesn't allow public match data :/");
+                    res.send([]);
                 }
 
             }
@@ -125,10 +125,10 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     }
 
                     var json = JSON.stringify(matches_info);
-                    return json;
+                    res.send(json);
                 }
                 else{
-                    res.send(memberreq + " doesn't allow public match data :/");
+                    res.send([]);
                 }
 
             }
@@ -168,7 +168,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send(json);
                 }
                 else{
-                    res.send(memberreq + " doesn't allow public match data :/");
+                    res.send([]);
                 }
 
             }
@@ -205,10 +205,10 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     }
 
                     var json = JSON.stringify(matches_info);
-                    return json;
+                    return res.send(json);
                 }
                 else{
-                    res.send(memberreq + " doesn't allow public match data :/");
+                    res.send([]);
                 }
 
             }
@@ -245,10 +245,10 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     }
 
                     var json = JSON.stringify(matches_info);
-                    return json;
+                    return res.send(json);
                 }
                 else{
-                    res.send(memberreq + " doesn't allow public match data :/");
+                    res.send([]);
                 }
 
             }

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node/WebServer.js" afterPath="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js" afterPath="$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" afterPath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
     </list>
     <ignored path="AFanShit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -158,8 +156,8 @@
         <option value="$PROJECT_DIR$/src/webapp/node/classes/Match.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/classes/Hero.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js" />
-        <option value="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
       </list>
     </option>
   </component>
@@ -383,12 +381,12 @@
       <workItem from="1460357920221" duration="9168000" />
       <workItem from="1460382558972" duration="229000" />
       <workItem from="1460382805796" duration="3310000" />
-      <workItem from="1460393748871" duration="11885000" />
+      <workItem from="1460393748871" duration="12257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35181000" />
+    <option name="totallyTimeSpent" value="35553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1440" height="873" extended-state="6" />
@@ -443,7 +441,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="33" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -840,6 +838,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -850,16 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="595">
+          <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
           <folding />
         </state>
       </provider>
