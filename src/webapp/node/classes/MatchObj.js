@@ -5,7 +5,7 @@
 
 function MatchObject(hero, tournamentGame, id) {
     this.hero = hero;
-    this.tournamentGame = TournamentGame;
+    this.tournamentGame = tournamentGame;
     this.id = id;
 }
 

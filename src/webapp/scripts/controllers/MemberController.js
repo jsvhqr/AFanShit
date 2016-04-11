@@ -7,7 +7,7 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
 
     var self = this;
     self.currentMember = $routeParams.teamMember;
-    self.matchHistory = DotaApiService.get({
+    self.matchHistory = DotaApiService.query({
         member: self.currentMember
     });
 
