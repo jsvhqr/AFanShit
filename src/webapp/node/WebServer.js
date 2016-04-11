@@ -13,17 +13,11 @@ app.get("/", function (req, res) {
         req.connection.remoteAddress ||
         req.socket.remoteAddress ||
         req.connection.socket.remoteAddress;
-    console.log("Request from " + ip);
+    console.log("Request from " + ip+ " for " + req.path);
     res.sendfile(path.resolve('../index.html'));
 });
 
-/* serves all the static files */
-app.get(/^(.+)$/, function (req, res) {
-    console.log('static file request : ' + req.params);
-    res.sendfile(path.resolve('..') + req.params[0]);
-});
-
-app.get("api/matchHistory/:member", function (req, res) {
+app.get("/api/matchHistory/:member", function (req, res) {
     console.log('request for : ' + req.getParameter("member") + " matchhistory" );
     var memberreq = req.getParameter("member");
 
@@ -39,6 +33,11 @@ app.get("api/matchHistory/:member", function (req, res) {
         res.send("EGMHistory");
     }
 });
+
+/* serves all the static files */
+app.use(express.static('../../webapp'));
+
+
 
 
 
