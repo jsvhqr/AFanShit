@@ -30,8 +30,8 @@
         </div>
         <div class="col-md-4 text-center">
             <ul class="list-group" ng-repeat="match in memberController.matchHistory">
-                <li class="list-group-item">
-                    Hero : {{match.hero}}
+                <li>
+                    <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
                     Lobby : {{match.lobby_type}}
                     MatchID : {{match.id}}
                 </li>

@@ -19,10 +19,8 @@ function init(heros) {
             var jsonHeros = JSON.parse(body);
             for (var i = 0; i < jsonHeros.result.heroes.length; i++) {
                 var substr = jsonHeros.result.heroes[i].name.substring(14);
-                var capitalstarter = substr.charAt(0).toUpperCase() + substr.slice(1);
-                var noUnderscore = capitalstarter.replace('_',' ');
-                console.log("Added new hero to memorydb: name " + noUnderscore + " id: " + jsonHeros.result.heroes[i].id);
-                var hero = new heroReference(jsonHeros.result.heroes[i].id, noUnderscore);
+                console.log("Added new hero to memorydb: name " + substr + " id: " + jsonHeros.result.heroes[i].id);
+                var hero = new heroReference(jsonHeros.result.heroes[i].id, substr);
                 heros.push(hero);
             }
         }
