@@ -18,8 +18,11 @@ function init(heros) {
         if (!error && response.statusCode === 200) {
             var jsonHeros = JSON.parse(body);
             for (var i = 0; i < jsonHeros.result.heroes.length; i++) {
-                console.log("Added new hero to memorydb: name " + jsonHeros.result.heroes[i].name + " id: " + jsonHeros.result.heroes[i].id);
-                var hero = new heroReference(jsonHeros.result.heroes[i].id, jsonHeros.result.heroes[i].name);
+                var substr = jsonHeros.result.heroes[i].name.substring(14);
+                var capitalstarter = substr.charAt(0).toUpperCase() + substr.slice(1);
+                var noUnderscore = capitalstarter.replace('_',' ');
+                console.log("Added new hero to memorydb: name " + noUnderscore + " id: " + jsonHeros.result.heroes[i].id);
+                var hero = new heroReference(jsonHeros.result.heroes[i].id, noUnderscore);
                 heros.push(hero);
             }
         }
