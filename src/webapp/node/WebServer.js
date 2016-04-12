@@ -65,15 +65,30 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                         var hero;
-                        var tournamentGame;
+                        var lobby_type;
                         var matchid;
 
                         matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                        if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
-                            tournamentGame = true;
-                        } else {
-                            tournamentGame = false;
+                        switch (jsonMatchHistory.result.matches[i].lobby_type){
+                            case 0 : lobby_type = "Public matchmaking"
+                                break;
+                            case 1 : lobby_type = "Practise"
+                                break;
+                            case 2 : lobby_type = "Tournament game"
+                                break;
+                            case 3 : lobby_type = "Tutorial "
+                                break;
+                            case 4 : lobby_type = "Bot game"
+                                break;
+                            case 5 : lobby_type = "Team match"
+                                break;
+                            case 6 : lobby_type = "Solo queue"
+                                break;
+                            case 7 : lobby_type = "Ranked matchmaking"
+                                break;
+                            default: lobby_type = "1v1 Solo mid"
+
                         }
 
                         for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
@@ -82,7 +97,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                             }
                         }
 
-                        var match = new matchObjectReference(hero,tournamentGame,matchid);
+                        var match = new matchObjectReference(hero,lobby_type,matchid);
                         matches_info.push(match);
 
                     }
@@ -105,15 +120,30 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                         var hero;
-                        var tournamentGame;
+                        var lobby_type;
                         var matchid;
 
                         matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                        if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
-                            tournamentGame = true;
-                        } else {
-                            tournamentGame = false;
+                        switch (jsonMatchHistory.result.matches[i].lobby_type){
+                            case 0 : lobby_type = "Public matchmaking"
+                                break;
+                            case 1 : lobby_type = "Practise"
+                                break;
+                            case 2 : lobby_type = "Tournament game"
+                                break;
+                            case 3 : lobby_type = "Tutorial "
+                                break;
+                            case 4 : lobby_type = "Bot game"
+                                break;
+                            case 5 : lobby_type = "Team match"
+                                break;
+                            case 6 : lobby_type = "Solo queue"
+                                break;
+                            case 7 : lobby_type = "Ranked matchmaking"
+                                break;
+                            default: lobby_type = "1v1 Solo mid"
+
                         }
 
                         for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
@@ -122,7 +152,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                             }
                         }
 
-                        var match = new matchObjectReference(hero,tournamentGame,matchid);
+                        var match = new matchObjectReference(hero,lobby_type,matchid);
                         matches_info.push(match);
 
                     }
@@ -145,15 +175,30 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                         var hero;
-                        var tournamentGame;
+                        var lobby_type;
                         var matchid;
 
                         matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                        if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
-                            tournamentGame = true;
-                        } else {
-                            tournamentGame = false;
+                        switch (jsonMatchHistory.result.matches[i].lobby_type){
+                            case 0 : lobby_type = "Public matchmaking"
+                                break;
+                            case 1 : lobby_type = "Practise"
+                                break;
+                            case 2 : lobby_type = "Tournament game"
+                                break;
+                            case 3 : lobby_type = "Tutorial "
+                                break;
+                            case 4 : lobby_type = "Bot game"
+                                break;
+                            case 5 : lobby_type = "Team match"
+                                break;
+                            case 6 : lobby_type = "Solo queue"
+                                break;
+                            case 7 : lobby_type = "Ranked matchmaking"
+                                break;
+                            default: lobby_type = "1v1 Solo mid"
+
                         }
 
                         for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
@@ -162,7 +207,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                             }
                         }
 
-                        var match = new matchObjectReference(hero,tournamentGame,matchid);
+                        var match = new matchObjectReference(hero,lobby_type,matchid);
                         matches_info.push(match);
 
                     }
@@ -185,15 +230,30 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                         var hero;
-                        var tournamentGame;
+                        var lobby_type;
                         var matchid;
 
                         matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                        if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
-                            tournamentGame = true;
-                        } else {
-                            tournamentGame = false;
+                        switch (jsonMatchHistory.result.matches[i].lobby_type){
+                            case 0 : lobby_type = "Public matchmaking"
+                                break;
+                            case 1 : lobby_type = "Practise"
+                                break;
+                            case 2 : lobby_type = "Tournament game"
+                                break;
+                            case 3 : lobby_type = "Tutorial "
+                                break;
+                            case 4 : lobby_type = "Bot game"
+                                break;
+                            case 5 : lobby_type = "Team match"
+                                break;
+                            case 6 : lobby_type = "Solo queue"
+                                break;
+                            case 7 : lobby_type = "Ranked matchmaking"
+                                break;
+                            default: lobby_type = "1v1 Solo mid"
+
                         }
 
                         for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
@@ -202,7 +262,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                             }
                         }
 
-                        var match = new matchObjectReference(hero,tournamentGame,matchid);
+                        var match = new matchObjectReference(hero,lobby_type,matchid);
                         matches_info.push(match);
 
                     }
@@ -225,15 +285,30 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
 
                         var hero;
-                        var tournamentGame;
+                        var lobby_type;
                         var matchid;
 
                         matchid = jsonMatchHistory.result.matches[i].match_id;
 
-                        if (jsonMatchHistory.result.matches[i].lobby_type === 2) {
-                            tournamentGame = true;
-                        } else {
-                            tournamentGame = false;
+                        switch (jsonMatchHistory.result.matches[i].lobby_type){
+                            case 0 : lobby_type = "Public matchmaking"
+                                break;
+                            case 1 : lobby_type = "Practise"
+                                break;
+                            case 2 : lobby_type = "Tournament game"
+                                break;
+                            case 3 : lobby_type = "Tutorial "
+                                break;
+                            case 4 : lobby_type = "Bot game"
+                                break;
+                            case 5 : lobby_type = "Team match"
+                                break;
+                            case 6 : lobby_type = "Solo queue"
+                                break;
+                            case 7 : lobby_type = "Ranked matchmaking"
+                                break;
+                            default: lobby_type = "1v1 Solo mid"
+
                         }
 
                         for(var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++){
@@ -242,7 +317,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
                             }
                         }
 
-                        var match = new matchObjectReference(hero,tournamentGame,matchid);
+                        var match = new matchObjectReference(hero,lobby_type,matchid);
                         matches_info.push(match);
 
                     }

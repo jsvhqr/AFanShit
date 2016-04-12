@@ -3,9 +3,9 @@
  */
 
 
-function MatchObject(hero, tournamentGame, id) {
+function MatchObject(hero, lobby_type, id) {
     this.hero = hero;
-    this.tournamentGame = tournamentGame;
+    this.lobby_type = lobby_type;
     this.id = id;
 }
 
