@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 text-center">
             <ul class="list-group" ng-repeat="match in memberController.matchHistory">
-                <li class="list-group-item" style="background: black">
+                <li class="list-group-item">
                     <div class="container-fluid">
                         <div class="col-md-4">
                             <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
@@ -45,7 +45,7 @@
             </ul>
          </div>
          <div class="col-md-4 text-center">
-             <h3>Stream</h3>
+            <iframe class="videoplayer" src="http://www.twitch.tv/embed?channel=AdmiralBulldog" height="600" width="100" frameborder="0" scrolling="no"></iframe>
          </div>
     </div>
  </div>
