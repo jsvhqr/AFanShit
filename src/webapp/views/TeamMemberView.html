@@ -30,10 +30,17 @@
         </div>
         <div class="col-md-4 text-center">
             <ul class="list-group" ng-repeat="match in memberController.matchHistory">
-                <li>
-                    <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
-                    Lobby : {{match.lobby_type}}
-                    MatchID : {{match.id}}
+                <li class="list-group-item" style="background: black">
+                    <div class="container-fluid">
+                        <div class="col-md-4">
+                            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
+                        </div>
+                        <div class="col-md-8">
+                            <label style="color:white;">Lobby : {{match.lobby_type}}</label>
+                            <label style="color:white;">Match ID : {{match.id}}</label>
+                            <span class="badge">match details</span>
+                        </div>
+                    </div>
                 </li>
             </ul>
          </div>
