@@ -10,6 +10,18 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.matchHistory = DotaApiService.query({
         member: self.currentMember
     });
+    self.channel;
 
+    if(self.currentMember === 'Akke'){
+        self.channel = 'followAkke';
+    }else if(self.currentMember === 'Loda'){
+        self.channel = 'LiveAndLetLoda';
+    }else if(self.currentMember === 'EGM'){
+        self.channel = 'egm';
+    }else if(self.currentMember === 'Bulldog'){
+        self.channel = 'admiralBulldog';
+    }else if(self.currentMember === 's4'){
+        self.channel = 's4';
+    }
 
 }]);

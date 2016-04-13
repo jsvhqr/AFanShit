@@ -6,3 +6,8 @@
     background:black;
 }
 
+h2 > b
+{
+    color:white;
+}
+
