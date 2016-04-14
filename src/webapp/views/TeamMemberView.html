@@ -1,62 +1,61 @@
-<div class="containe-fluid">
-    <div class="row jumbotron">
-        <div class="col-md-4 text-center">
-            <h2><b>TWITTER</b></h2>
-            <div class="container-fluid" ng-if="memberController.currentMember === 'Loda'">
+<div ng-include="'../views/nav.html'"></div>
+<div class="jumbotron row">
+    <div class="col-md-4 text-center">
+        <h2 style="font-family: Luckiest Guy;"><b>TWITTER</b></h2>
+        <div class="container-fluid" ng-if="memberController.currentMember === 'Loda'">
+            <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id="701022336242294784"> </a>
                 <twitter-timeline>
-                    <a class="twitter-timeline" data-widget-id="701022336242294784"> </a>
-                    <twitter-timeline>
-            </div>
-            <div class="container-fluid" ng-if="memberController.currentMember === 'Akke'">
-                <twitter-timeline>
-                    <a class="twitter-timeline" data-widget-id="701044645627879424"> </a>
-                    <twitter-timeline>
-            </div>
-            <div class="container-fluid" ng-if="memberController.currentMember === 'Bulldog'">
-                <twitter-timeline>
-                    <a class="twitter-timeline" data-widget-id="701044916693168129"> </a>
-                    <twitter-timeline>
-            </div>
-            <div class="container-fluid" ng-if="memberController.currentMember === 'EGM'">
-                <twitter-timeline>
-                    <a class="twitter-timeline" data-widget-id="701044479969644544"> </a>
-                    <twitter-timeline>
-            </div>
-            <div class="container-fluid" ng-if="memberController.currentMember === 's4'">
-                <twitter-timeline>
-                    <a class="twitter-timeline" data-widget-id="701044800032792576"> </a>
-                    <twitter-timeline>
-            </div>
         </div>
-        <div class="col-md-4 text-center">
-            <h2><b>MATCHES</b></h2>
-            <ul class="list-group">
-                <li ng-if="memberController.matchHistory.length === 0">
-                    <i class="glyphicon glyphicon-thumbs-down" style="color:white;"></i>
-                    <h1 style="color:white;">If no matches shows up after a while then {{memberController.currentMember}} decided not to reveal public match  data :/
-                    </h1>
-                </li>
-                <li class="list-group-item" ng-repeat="match in memberController.matchHistory">
-                    <div class="container-fluid">
-                        <div class="col-md-4">
-                            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png"
-                                 style="margin-top: 15px;">
-                        </div>
-                        <div class="col-md-8">
-                            <label style="color:white;">Lobby : {{match.lobby_type}}</label>
-                            <label style="color:white;">Match ID : {{match.id}}</label>
-                            <span class="badge">match details</span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
+        <div class="container-fluid" ng-if="memberController.currentMember === 'Akke'">
+            <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id="701044645627879424"> </a>
+                <twitter-timeline>
         </div>
-        <div class="col-md-4 text-center">
-            <h2><b>GENERAL INFO</b></h2>
+        <div class="container-fluid" ng-if="memberController.currentMember === 'Bulldog'">
+            <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id="701044916693168129"> </a>
+                <twitter-timeline>
+        </div>
+        <div class="container-fluid" ng-if="memberController.currentMember === 'EGM'">
+            <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id="701044479969644544"> </a>
+                <twitter-timeline>
+        </div>
+        <div class="container-fluid" ng-if="memberController.currentMember === 's4'">
+            <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id="701044800032792576"> </a>
+                <twitter-timeline>
         </div>
     </div>
-</div>
+    <div class="col-md-4 text-center">
+        <h2 style="font-family: Luckiest Guy;"><b>MATCHES</b></h2>
+        <ul class="list-group">
+            <li ng-if="memberController.matchHistory.length === 0">
+                <i class="glyphicon glyphicon-thumbs-down" style="color:white;"></i>
+                <h1 style="color:white; font-family: Luckiest Guy;">If no matches shows up after a while then {{memberController.currentMember}}
+                    decided not to reveal public match data :/
+                </h1>
+            </li>
+            <li class="list-group-item" ng-repeat="match in memberController.matchHistory">
+                <div class="container-fluid">
+                    <div class="col-md-4">
+                        <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png"
+                             style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-8">
+                        <label style="color:white;">Lobby : {{match.lobby_type}}</label>
+                        <label style="color:white;">Match ID : {{match.id}}</label>
+                        <span class="badge">match details</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
+    </div>
+    <div class="col-md-4 text-center">
+        <h2 style="font-family: Luckiest Guy;"><b>GENERAL INFO</b></h2>
+    </div>
+</div>
 
 
