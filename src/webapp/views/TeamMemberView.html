@@ -37,7 +37,7 @@
                     decided not to reveal public match data :/
                 </h1>
             </li>
-            <li class="list-group-item" ng-repeat="match in memberController.matchHistory">
+            <li class="list-group-item" ng-repeat="match in memberController.matchHistory | startFrom:memberController.currentPage*memberController.pageSize | limitTo:memberController.pageSize">
                 <div class="container-fluid">
                     <div class="col-md-4">
                         <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png"
@@ -51,7 +51,13 @@
                 </div>
             </li>
         </ul>
-
+        <button class="btn-default glyphicon glyphicon-chevron-left" style="background-color: white;" ng-disabled="memberController.currentPage == 0" ng-click="memberController.currentPage=memberController.currentPage-1">
+            <label style="font-family: Luckiest Guy">Previous</label>
+        </button>
+        {{memberController.currentPage+1}}/{{memberController.numberOfPages()}}
+        <button class="btn-default glyphicon glyphicon-chevron-right" style="background-color: white;" ng-disabled="memberController.currentPage >= memberController.matchHistory.length/memberController.pageSize - 1" ng-click="memberController.currentPage=memberController.currentPage+1">
+            <label style="font-family: Luckiest Guy">Next</label>
+        </button>
     </div>
     <div class="col-md-4 text-center">
         <h2 style="font-family: Luckiest Guy;"><b>GENERAL INFO</b></h2>

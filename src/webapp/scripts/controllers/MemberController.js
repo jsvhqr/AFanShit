@@ -24,4 +24,11 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
         self.channel = 's4';
     }
 
+    self.pageSize = 7;
+    self.currentPage =1;
+
+    self.numberOfPages=function(){
+        return Math.ceil(self.matchHistory.length/self.pageSize);
+    }
+
 }]);

@@ -48,7 +48,7 @@ app.get("/", function (req, res) {
 });
 
 /* serves all the static files */
-app.use(express.static('../../webapp'));
+app.use(express.static('..'));
 
 app.get("/api/matchHistory/:member", function (req, res) {
     console.log('request for : ' + req.param("member") + " matchhistory");
