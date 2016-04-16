@@ -51,12 +51,14 @@
                 </div>
             </li>
         </ul>
-        <button class="btn-default glyphicon glyphicon-chevron-left" style="background-color: white;" ng-disabled="memberController.currentPage == 0" ng-click="memberController.currentPage=memberController.currentPage-1">
+        <button class="btn-default" style="background-color: white;" ng-disabled="memberController.currentPage == 0" ng-click="memberController.currentPage=memberController.currentPage-1">
+            <i class="glyphicon glyphicon-chevron-left"></i>
             <label style="font-family: Luckiest Guy">Previous</label>
         </button>
-        {{memberController.currentPage+1}}/{{memberController.numberOfPages()}}
-        <button class="btn-default glyphicon glyphicon-chevron-right" style="background-color: white;" ng-disabled="memberController.currentPage >= memberController.matchHistory.length/memberController.pageSize - 1" ng-click="memberController.currentPage=memberController.currentPage+1">
+        <label style="font-family: Luckiest Guy; color:white;">{{memberController.currentPage+1}}/{{memberController.numberOfPages()}}</label>
+        <button class="btn-default" style="background-color: white;" ng-disabled="memberController.currentPage >= memberController.matchHistory.length/memberController.pageSize - 1" ng-click="memberController.currentPage=memberController.currentPage+1">
             <label style="font-family: Luckiest Guy">Next</label>
+            <i class="glyphicon glyphicon-chevron-right"></i>
         </button>
     </div>
     <div class="col-md-4 text-center">

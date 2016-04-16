@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node/WebServer.js" afterPath="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" afterPath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js" afterPath="$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/styles/gaps.css" afterPath="$PROJECT_DIR$/src/webapp/styles/gaps.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/views/TeamMemberView.html" afterPath="$PROJECT_DIR$/src/webapp/views/TeamMemberView.html" />
     </list>
     <ignored path="AFanShit.iws" />
@@ -73,8 +70,8 @@
       <file leaf-file-name="TeamMemberView.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/views/TeamMemberView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="57" column="102" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
+            <state relative-caret-position="504">
+              <caret line="55" column="69" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
@@ -85,6 +82,7 @@
                 <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -103,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="540">
+              <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -127,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gaps.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gaps.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/webapp/styles/gaps.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -187,8 +185,8 @@
         <option value="$PROJECT_DIR$/src/webapp/views/nav.html" />
         <option value="$PROJECT_DIR$/src/webapp/styles/gaps.css" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js" />
-        <option value="$PROJECT_DIR$/src/webapp/views/TeamMemberView.html" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
+        <option value="$PROJECT_DIR$/src/webapp/views/TeamMemberView.html" />
       </list>
     </option>
   </component>
@@ -198,8 +196,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1855" />
-    <option name="y" value="1224" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
     <option name="width" value="1855" />
     <option name="height" value="1176" />
   </component>
@@ -516,15 +514,15 @@
       <workItem from="1460581940676" duration="8000" />
       <workItem from="1460666215069" duration="6769000" />
       <workItem from="1460802308909" duration="11000" />
-      <workItem from="1460802504661" duration="5274000" />
+      <workItem from="1460802504661" duration="6682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75636000" />
+    <option name="totallyTimeSpent" value="77044000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1855" y="1224" width="1855" height="1176" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.180593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -648,6 +646,7 @@
             <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -715,6 +714,7 @@
             <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -782,6 +782,7 @@
             <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -923,10 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/styles/gaps.css">
+    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="540">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -941,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/views/TeamMemberView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="57" column="102" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
+        <state relative-caret-position="504">
+          <caret line="55" column="69" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
@@ -953,6 +954,7 @@
             <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -960,10 +962,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
+    <entry file="file://$PROJECT_DIR$/src/webapp/styles/gaps.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
