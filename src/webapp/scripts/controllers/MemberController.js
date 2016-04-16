@@ -24,7 +24,7 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
         self.channel = 's4';
     }
 
-    self.pageSize = 7;
+    self.pageSize = 8;
     self.currentPage = 0;
 
     self.numberOfPages=function(){

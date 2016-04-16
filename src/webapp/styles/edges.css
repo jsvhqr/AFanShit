@@ -1,3 +1,7 @@
 .list-group-item, .twitter-timeline{
     border-radius: 4px;
 }
+
+.btn-default{
+    border-radius: 4px;
+}
