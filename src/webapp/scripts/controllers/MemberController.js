@@ -31,7 +31,7 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
-    self.matchDetails = function (id) {
+    self.getMatchDetails = function (id) {
 
         var modalInstance = $uibModal.open({
             animation: self.animationsEnabled,
