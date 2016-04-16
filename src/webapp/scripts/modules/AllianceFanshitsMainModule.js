@@ -5,7 +5,7 @@
  */                                 
 
 
-var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource']);
+var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource', 'ui.bootstrap']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -15,7 +15,7 @@ app.config(['$routeProvider',
         controller: 'HomeController as homeController'
       }).
       when('/:teamMember', {
-        templateUrl: 'views/TeamMemberView.html',
+        templateUrl: 'views/teamMemberView.html',
         controller : 'MemberController as memberController'
       }).     
       otherwise({

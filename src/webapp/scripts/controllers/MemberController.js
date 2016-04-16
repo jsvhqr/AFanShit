@@ -3,10 +3,11 @@
  */
 
 
-angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService',function($routeParams, DotaApiService){
+angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService', '$uibModal',function($routeParams, DotaApiService, $uibModal){
 
     var self = this;
     self.currentMember = $routeParams.teamMember;
+    self.animationsEnabled = true;
     self.matchHistory = DotaApiService.query({
         member: self.currentMember
     });
@@ -30,10 +31,14 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
+    self.matchDetails = function (id) {
 
-    self.getMatchDetails=function(id){
-
-        
+        var modalInstance = $uibModal.open({
+            animation: self.animationsEnabled,
+            templateUrl: '../views/matchDetailsModal.html',
+            controller: self,
+            id: id
+        });
     };
 
 }]);
