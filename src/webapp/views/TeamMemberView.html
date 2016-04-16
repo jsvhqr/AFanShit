@@ -45,7 +45,7 @@
                     <div class="col-md-8">
                         <label style="color:white;">Lobby : {{match.lobby_type}}</label>
                         <label style="color:white;">Match ID : {{match.id}}</label>
-                        <span class="badge">match details</span>
+                        <span class="badge" ng-click="memberController.getMatchDetails(match.id)">match details</span>
                     </div>
                 </div>
             </li>

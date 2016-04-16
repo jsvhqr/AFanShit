@@ -29,6 +29,11 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
 
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
-    }
+    };
+
+    self.getMatchDetails=function(id){
+
+        
+    };
 
 }]);
