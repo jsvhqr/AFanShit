@@ -1,5 +1,5 @@
 .navbar-inverse, .list-group-item, .twitter-timeline{
-    background:  #292F33;
+    background-color:  #292F33;
 }
 
 .jumbotron{
@@ -11,3 +11,10 @@ h2 > b
     color:white;
 }
 
+.modal-body, .modal-header, .modal-footer{
+    background-color:  black;
+}
+
+.modal-footer > .btn-default{
+    background-color: #292F33;
+}

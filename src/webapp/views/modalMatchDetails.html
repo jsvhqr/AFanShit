@@ -1,11 +1,17 @@
 <div class="modal-header">
-    <h3>I'm a modal!</h3>
+    <h1 style="color:white; font-family: Luckiest Guy">Match ID : {{id}}</h1>
 </div>
 <div class="modal-body">
-    modalbody
-    <h3>{{id}}</h3>
+<div class="container-fluid">
+    <div class="col-md-6">
+        <label style="color:white; font-family: Luckiest Guy">Radiant</label>
+    </div>
+    <div class="col-md-6">
+        <label style="color:white; font-family: Luckiest Guy">Dire</label>
+    </div>
+</div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">OK</button>
-    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <button class="btn-default" ng-click="ok()"><label style="color:white; font-family: Luckiest Guy">OK</label></button>
+    <button class="btn-default" ng-click="cancel()"><label style="color:white; font-family: Luckiest Guy">Cancel</label></button>
 </div>
