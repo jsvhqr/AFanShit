@@ -3,7 +3,7 @@
  */
 
 
-angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService','$uibModal',function($routeParams, DotaApiService,$uibModal){
+angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService','$uibModal','$scope',function($routeParams, DotaApiService,$uibModal,$scope){
 
     var self = this;
     self.currentMember = $routeParams.teamMember;
@@ -30,33 +30,39 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
-    self.modalInstance;
-    self.currentMatchID;
-    self.animationsEnabled = true;
+
+    $scope.animationsEnabled = true;
+    $scope.modalInstance;
+    $scope.member;
+    $scope.id;
     self.getmatchDetails = function (id) {
 
-        self.currentMatchID = id;
-        self.modalInstance = $uibModal.open({
+        $scope.id = id;
+        $scope.member = self.currentMember;
+        $scope.modalInstance = $uibModal.open({
             animation: self.animationsEnabled,
             templateUrl: '../views/modalMatchDetails.html',
-            controller: 'MemberController as memberController',
+            scope: $scope,
             size: 'lg'
         });
 
-        self.modalInstance.result.then(function () {
-        }, function () {
-        });
+        $scope.modalInstance.result.then(
+            function () {
+                        },
+            function () {
+                        }
+        );
 
-        self.toggleAnimation = function () {
-            self.animationsEnabled = !self.animationsEnabled;
+        $scope.toggleAnimation = function () {
+            $scope.animationsEnabled = !$scope.animationsEnabled;
         };
 
-        self.ok = function () {
-            self.modalInstance.close(result);
+        $scope.ok = function () {
+            $scope.modalInstance.close();
         };
 
-        self.cancel = function () {
-            self.modalInstance.dismiss('cancel');
+        $scope.cancel = function () {
+            $scope.modalInstance.dismiss('cancel');
         };
     };
 
