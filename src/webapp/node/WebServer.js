@@ -332,6 +332,23 @@ app.get("/api/matchHistory/:member", function (req, res) {
     }
 });
 
+app.get("/api/matchDetails/:id", function (req, res) {
+
+    console.log('request for : ' + req.param("id") + " matchdetails");
+
+    var matchID = req.param("id");
+
+    request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/v001" + steamkey + "&match_id=" + matchID, function (error, response, body) {
+
+        if (!error && response.statusCode === 200) {
+            
+        }
+
+    });
+
+
+});
+
 app.listen(8080);
 
 console.log("App listening on port 8080");
