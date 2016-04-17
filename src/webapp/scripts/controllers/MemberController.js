@@ -3,11 +3,10 @@
  */
 
 
-angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService', '$uibModal',function($routeParams, DotaApiService, $uibModal){
+angular.module('AllianceFanshits').controller('MemberController', ['$routeParams','DotaApiService','$uibModal',function($routeParams, DotaApiService,$uibModal){
 
     var self = this;
     self.currentMember = $routeParams.teamMember;
-    self.animationsEnabled = true;
     self.matchHistory = DotaApiService.query({
         member: self.currentMember
     });
@@ -31,14 +30,36 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
-    self.getMatchDetails = function (id) {
+    self.currentMatchID;
+    self.animationsEnabled = true;
+    self.getmatchDetails = function (id) {
 
+        self.currentMatchID = id;
         var modalInstance = $uibModal.open({
             animation: self.animationsEnabled,
-            templateUrl: '../views/matchDetailsModal.html',
-            controller: self,
-            id: id
+            templateUrl: '../views/modalMatchDetails.html',
+            controller: 'MemberController as memberController',
+            size: 'lg'
         });
+
+        modalInstance.result.then(function () {
+        }, function () {
+        });
+
+        self.toggleAnimation = function () {
+            self.animationsEnabled = !self.animationsEnabled;
+        };
     };
+
+    self.id = self.currentMatchID;
+
+    self.ok = function () {
+        $uibModalInstance.close();
+    };
+
+    self.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
+
 
 }]);
