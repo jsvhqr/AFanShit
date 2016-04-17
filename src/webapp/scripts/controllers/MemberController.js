@@ -30,36 +30,38 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
+    self.modalInstance;
     self.currentMatchID;
     self.animationsEnabled = true;
     self.getmatchDetails = function (id) {
 
         self.currentMatchID = id;
-        var modalInstance = $uibModal.open({
+        self.modalInstance = $uibModal.open({
             animation: self.animationsEnabled,
             templateUrl: '../views/modalMatchDetails.html',
             controller: 'MemberController as memberController',
             size: 'lg'
         });
 
-        modalInstance.result.then(function () {
+        self.modalInstance.result.then(function () {
         }, function () {
         });
 
         self.toggleAnimation = function () {
             self.animationsEnabled = !self.animationsEnabled;
         };
+
+        self.ok = function () {
+            self.modalInstance.close(result);
+        };
+
+        self.cancel = function () {
+            self.modalInstance.dismiss('cancel');
+        };
     };
 
-    self.id = self.currentMatchID;
 
-    self.ok = function () {
-        $uibModalInstance.close();
-    };
 
-    self.cancel = function () {
-        $uibModalInstance.dismiss('cancel');
-    };
 
 
 }]);

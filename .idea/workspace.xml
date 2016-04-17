@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/webapp/views/matchDetailsModal.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/src/webapp/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/index.html" afterPath="$PROJECT_DIR$/src/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" afterPath="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/views/teamMemberView.html" afterPath="$PROJECT_DIR$/src/webapp/views/teamMemberView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" afterPath="$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" />
     </list>
     <ignored path="AFanShit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+            <state relative-caret-position="180">
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -73,28 +64,28 @@
       <file leaf-file-name="AllianceFanshitsMainModule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
+            <state relative-caret-position="252">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+            <state relative-caret-position="666">
+              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modalMatchDetails.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modalMatchDetails.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="57" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="57" />
+            <state relative-caret-position="72">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -113,8 +104,8 @@
       <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
+            <state relative-caret-position="162">
+              <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -139,9 +130,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -178,10 +169,11 @@
         <option value="$PROJECT_DIR$/src/webapp/views/matchDetailsModal.html" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/services/ModalService.js" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js" />
-        <option value="$PROJECT_DIR$/src/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/webapp/views/teamMemberView.html" />
-        <option value="$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" />
+        <option value="$PROJECT_DIR$/src/webapp/styles/modalproblem.css" />
+        <option value="$PROJECT_DIR$/src/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js" />
+        <option value="$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" />
       </list>
     </option>
   </component>
@@ -298,6 +290,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -355,6 +369,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,12 +511,12 @@
       <workItem from="1460666215069" duration="6769000" />
       <workItem from="1460802308909" duration="11000" />
       <workItem from="1460802504661" duration="16774000" />
-      <workItem from="1460885553372" duration="10740000" />
+      <workItem from="1460885553372" duration="12386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97876000" />
+    <option name="totallyTimeSpent" value="99522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-1176" width="1855" height="1176" extended-state="6" />
@@ -494,7 +530,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13402778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40136054" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4007253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -517,18 +553,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/views/teamMemberView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -827,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="62" column="86" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/HomeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -867,22 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/views/teamMemberView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -907,18 +912,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html">
+    <entry file="file://$PROJECT_DIR$/src/webapp/styles/modalproblem.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="57" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="57" />
+        <state relative-caret-position="36">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+        <state relative-caret-position="666">
+          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
