@@ -1,6 +1,6 @@
 <div ng-include="'../views/nav.html'"></div>
-<div class="jumbotron row">
-    <div class="col-md-4 text-center">
+<div class="jumbotron row"> 
+    <div class="col-md-4 text-center" id="twitterCol">
         <h2 style="font-family: Luckiest Guy;"><b>TWITTER</b></h2>
         <div class="container-fluid" ng-if="memberController.currentMember === 'Loda'">
             <twitter-timeline>
@@ -28,10 +28,10 @@
                 <twitter-timeline>
         </div>
     </div>
-    <div class="col-md-4 text-center">
+    <div class="col-md-4 text-center" id="machesCol">
         <h2 style="font-family: Luckiest Guy;"><b>MATCHES</b></h2>
-        <ul class="list-group" id="matchesList">
-            <li ng-if="memberController.matchHistory.length === 0">
+        <ul class="list-group"> 
+            <li class="list-group-item" ng-if="memberController.matchHistory.length === 0">
                 <h1 style="color:white; font-family: Luckiest Guy;">If no matches shows up after a while then {{memberController.currentMember}}
                     decided not to reveal public match data :/
                 </h1>
@@ -49,19 +49,21 @@
                     </div>
                 </div>
             </li>
+	    <li class="list-group-item">
+		 <button class="btn-default" style="background-color: #292F33;" ng-disabled="memberController.currentPage == 0" ng-click="memberController.currentPage=memberController.currentPage-1">
+		    <i style="color:white;" class="glyphicon glyphicon-chevron-left"></i>
+		    <label style="font-family: Luckiest Guy; color:white;">Previous</label>
+		</button>
+		<label ng-if="memberController.matchHistory.length > 0" style="font-family: Luckiest Guy; color:white;">{{memberController.currentPage+1}}/{{memberController.numberOfPages()}}</label>
+		<label ng-if="memberController.matchHistory.length === 0" style="font-family: Luckiest Guy; color:white;">0/0</label>
+		<button class="btn-default" style="background-color: #292F33;" ng-disabled="memberController.currentPage >= memberController.matchHistory.length/memberController.pageSize - 1" ng-click="memberController.currentPage=memberController.currentPage+1">
+		    <label style="font-family: Luckiest Guy; color:white;">Next</label>
+		    <i style="color:white;" class="glyphicon glyphicon-chevron-right"></i>
+		</button>
+	    </li>
         </ul>
-        <button class="btn-default" style="background-color: #292F33;" ng-disabled="memberController.currentPage == 0" ng-click="memberController.currentPage=memberController.currentPage-1">
-            <i style="color:white;" class="glyphicon glyphicon-chevron-left"></i>
-            <label style="font-family: Luckiest Guy; color:white;">Previous</label>
-        </button>
-        <label ng-if="memberController.matchHistory.length > 0" style="font-family: Luckiest Guy; color:white;">{{memberController.currentPage+1}}/{{memberController.numberOfPages()}}</label>
-        <label ng-if="memberController.matchHistory.length === 0" style="font-family: Luckiest Guy; color:white;">0/0</label>
-        <button class="btn-default" style="background-color: #292F33;" ng-disabled="memberController.currentPage >= memberController.matchHistory.length/memberController.pageSize - 1" ng-click="memberController.currentPage=memberController.currentPage+1">
-            <label style="font-family: Luckiest Guy; color:white;">Next</label>
-            <i style="color:white;" class="glyphicon glyphicon-chevron-right"></i>
-        </button>
     </div>
-    <div class="col-md-4 text-center">
+    <div class="col-md-4 text-center" id="generalCol">
         <h2 style="font-family: Luckiest Guy;"><b>GENERAL INFO</b></h2>
     </div>
 </div>

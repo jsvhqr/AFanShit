@@ -4,5 +4,9 @@ html {
 body {
     min-height: 100%;
 }
+#twitterCol, #matchesCol, #generalCol{
 
+height: 600px;
+
+}
 
