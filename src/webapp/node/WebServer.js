@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var steamkey = "31752057B2C8038B2F4DD19174E2B6A7";
+var steamkey = "E14C83D639FA9E59090649E9FDB10B3E";
 var steamBaseUri = "https://api.steampowered.com/";
 var lodaKey = "101495620";
 var s4Key = "41231571";
@@ -107,6 +107,9 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send([]);
                 }
 
+            }else{
+                res.send([]);
+				console.log("something is wrong :/ " + response.statusCode + " " + error);
             }
         });
     } else if (memberreq === 's4') {
@@ -162,6 +165,9 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send([]);
                 }
 
+            }else{
+                res.send([]);
+				console.log("something is wrong :/ " + response.statusCode + " "  + error);
             }
         });
     } else if (memberreq === 'Bulldog') {
@@ -217,7 +223,11 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send([]);
                 }
 
+            }else{
+                res.send([]);
+                console.log("something is wrong :/ " + response.statusCode + " "  + error);
             }
+
         });
     } else if (memberreq === 'Akke') {
         request(steamBaseUri + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamkey + "&account_id=" + akkeKey, function (error, response, body) {
@@ -272,6 +282,9 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send([]);
                 }
 
+            }else{
+                res.send([]);
+				console.log("something is wrong :/ " + response.statusCode + " " + error);
             }
         });
     } else if (memberreq === 'EGM') {
@@ -327,7 +340,11 @@ app.get("/api/matchHistory/:member", function (req, res) {
                     res.send([]);
                 }
 
+            }else{
+                res.send([]);
+				console.log("something is wrong :/ " + response.statusCode + " "  + error);
             }
+
         });
     }
 });

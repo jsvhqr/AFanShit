@@ -5,7 +5,7 @@
  */                                 
 
 
-var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource', 'ui.bootstrap']);
+var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
