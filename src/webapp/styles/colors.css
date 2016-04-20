@@ -10,11 +10,7 @@ h2 > b
 {
     color:white;
 }
-
-.modal-body, .modal-header, .modal-footer{
-    background-color:  black;
+body{
+background-color:black;
 }
 
-.modal-footer > .btn-default{
-    background-color: #292F33;
-}
