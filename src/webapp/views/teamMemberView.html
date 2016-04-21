@@ -30,10 +30,10 @@
     </div>
     <div class="col-md-4 text-center">
         <h2 style="font-family: Luckiest Guy;"><b>MATCHES</b></h2>
-	<div vs-repeat style="height: 600px; overflow:scroll;overflow-x:hidden;"> 
-	    <div ng-repeat="match in memberController.matchHistory">
-		<div class="container">
-		    <div class="col-md-4">
+	<div vs-repeat id="matchesContainer" style="height: 600px; overflow:scroll;overflow-x:hidden;"> 
+	    <div ng-repeat="match in memberController.matchHistory" style="border-style:groove; border-color:white;">
+		<div class="container" id="match">
+		    <div class="col-md-4" style="margin-top:15px;">
 			<img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png"></img>
 		    </div>
 		    <div class="col-md-8">
