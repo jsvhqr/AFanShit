@@ -26,7 +26,6 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
 
     self.pageSize = 8;
     self.currentPage = 0;
-
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };

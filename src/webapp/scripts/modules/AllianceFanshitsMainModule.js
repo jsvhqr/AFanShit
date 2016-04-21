@@ -5,7 +5,7 @@
  */                                 
 
 
-var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource']);
+var app = angular.module('AllianceFanshits', ['ngRoute', 'ngtweet','ngResource','vs-repeat']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
