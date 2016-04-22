@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="" />
+    <list default="true" id="9fe6c918-a246-4720-87e8-3f3089322568" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webapp/node/WebServer.js" afterPath="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
+    </list>
     <ignored path="AFanShit.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="405">
               <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
               <folding />
             </state>
@@ -34,23 +37,11 @@
       <file leaf-file-name="teamMemberView.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/views/teamMemberView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+            <state relative-caret-position="660">
+              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -60,7 +51,7 @@
       <file leaf-file-name="AllianceFanshitsMainModule.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="45">
               <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
               <folding />
             </state>
@@ -70,8 +61,8 @@
       <file leaf-file-name="MemberController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="465">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,7 +71,7 @@
       <file leaf-file-name="colors.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/styles/colors.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="240">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
@@ -90,33 +81,53 @@
       <file leaf-file-name="HomeCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/HomeCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2159">
-              <caret line="222" column="33" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="33" />
+            <state relative-caret-position="617">
+              <caret line="363" column="16" selection-start-line="363" selection-start-column="16" selection-end-line="363" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webapp/views/nav.html">
+      <file leaf-file-name="Player.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+            <state relative-caret-position="330">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#a#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc;n#Player#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchDetails.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/MatchDetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!doc;n#MatchDetails#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hero.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/webapp/scripts/modules/config.js" />
         <option value="$PROJECT_DIR$/src/webapp/scripts/services/DotaApiService.js" />
         <option value="module.js" />
-        <option value="$PROJECT_DIR$/src/webapp/node/classes/Player.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/classes/Match.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/classes/Hero.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js" />
@@ -169,7 +179,9 @@
         <option value="$PROJECT_DIR$/src/webapp/styles/colors.css" />
         <option value="$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" />
         <option value="$PROJECT_DIR$/src/webapp/views/teamMemberView.html" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/MatchDetails.js" />
         <option value="$PROJECT_DIR$/src/webapp/node/WebServer.js" />
+        <option value="$PROJECT_DIR$/src/webapp/node/classes/Player.js" />
       </list>
     </option>
   </component>
@@ -179,10 +191,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-1176" />
-    <option name="width" value="1855" />
-    <option name="height" value="1176" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -389,6 +400,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFanshit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -401,7 +438,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -509,17 +546,18 @@
       <workItem from="1460802504661" duration="16774000" />
       <workItem from="1460885553372" duration="23004000" />
       <workItem from="1461163002556" duration="4590000" />
+      <workItem from="1461350570675" duration="2217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114730000" />
+    <option name="totallyTimeSpent" value="116947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-1176" width="1855" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.180593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -555,13 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/services/DotaApiService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -605,18 +636,6 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -672,18 +691,6 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -734,15 +741,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Player.js" />
     <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Match.js" />
-    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/UIFixes/fixtwitter.js" />
     <entry file="file://$PROJECT_DIR$/src/webapp/styles/general.css" />
     <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/MatchObj.js">
@@ -822,7 +821,7 @@
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MatchDetailsController.js" />
     <entry file="file://$PROJECT_DIR$/src/webapp/styles/colors.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="240">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
@@ -830,7 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="405">
           <caret line="27" column="55" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding />
         </state>
@@ -839,7 +838,7 @@
     <entry file="file://$PROJECT_DIR$/src/webapp/views/modalMatchDetails.html" />
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/HomeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
@@ -847,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/modules/AllianceFanshitsMainModule.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="45">
           <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
           <folding />
         </state>
@@ -855,43 +854,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/scripts/controllers/MemberController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webapp/views/teamMemberView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        <state relative-caret-position="660">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#1;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Hero.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2159">
-          <caret line="222" column="33" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="33" />
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/WebServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="363" column="16" selection-start-line="363" selection-start-column="16" selection-end-line="363" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/MatchDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc;n#MatchDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webapp/node/classes/Player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc;n#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

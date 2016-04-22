@@ -12,6 +12,7 @@ var request = require('request');
 var heroes = new Array();
 var heroReference = require('./classes/Hero.js');
 var matchObjectReference = require('./classes/MatchObj.js');
+var matchDetailsReference = require('./classes/MatchDetails');
 
 function init(heros) {
     request(steamBaseUri + "/IEconDOTA2_570/GetHeroes/v001/?key=" + steamkey + "&language=english", function (error, response, body) {
@@ -358,7 +359,14 @@ app.get("/api/matchDetails/:id", function (req, res) {
     request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/v001" + steamkey + "&match_id=" + matchID, function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
-            
+            var jsonMatchDetails = JSON.parse(body);
+            if(jsonMatchDetails.result.status !== 15){
+                
+            }
+            else{
+                res.send([]);
+                console.log("something is wrong :/ " + response.statusCode + " "  + error);
+            }
         }
 
     });
