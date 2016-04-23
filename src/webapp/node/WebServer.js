@@ -51,7 +51,7 @@ app.get("/", function (req, res) {
 /* serves all the static files */
 app.use(express.static('..'));
 
-app.get("/api/matchHistory/:member", function (req, res) {
+app.get("/api/match/History/:member", function (req, res) {
     console.log('request for : ' + req.param("member") + " matchhistory");
     var memberreq = req.param("member");
 
@@ -350,7 +350,7 @@ app.get("/api/matchHistory/:member", function (req, res) {
     }
 });
 
-app.get("/api/matchDetails/:id", function (req, res) {
+app.get("/api/match/Details/:id", function (req, res) {
 
     console.log('request for : ' + req.param("id") + " matchdetails");
 
@@ -361,7 +361,9 @@ app.get("/api/matchDetails/:id", function (req, res) {
         if (!error && response.statusCode === 200) {
             var jsonMatchDetails = JSON.parse(body);
             if(jsonMatchDetails.result.status !== 15){
-                
+                var matchDetails = new matchDetailsReference(jsonMatchDetails.result.players,jsonMatchDetails.result.season,jsonMatchDetails.result.radiant_win,jsonMatchDetails.result.duration,jsonMatchDetails.result.start_time,jsonMatchDetails.result.leagueid,jsonMatchDetails.result.positive_votes,jsonMatchDetails.result.negative_votes,jsonMatchDetails.result.game_mode,jsonMatchDetails.result.pick_bans,jsonMatchDetails.result.radiant_score,jsonMatchDetails.result.dire_score);
+                var json = JSON.stringify(matchDetails);
+                res.send(json);
             }
             else{
                 res.send([]);

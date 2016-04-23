@@ -7,8 +7,11 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
 
     var self = this;
     self.currentMember = $routeParams.teamMember;
-    self.matchHistory = DotaApiService.query({
+    self.matchHistory;
+    DotaApiService.matchHistory({
         member: self.currentMember
+    }).$promise.then(function(result){
+        self.matchHistory = result;
     });
     self.channel;
 
@@ -29,5 +32,9 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     self.numberOfPages=function(){
         return Math.ceil(self.matchHistory.length/self.pageSize);
     };
+    
+    self.getmatchDetails = function (id) {
+
+    }
 
 }]);
