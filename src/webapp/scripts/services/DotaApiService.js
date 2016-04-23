@@ -13,7 +13,7 @@ angular.module('AllianceFanshits').factory("DotaApiService",['$resource',functio
             method: 'GET'
         },
         matchDetails : {
-            url: '/ap/match/Details/:id',
+            url: '/api/match/Details/:id',
             method: 'GET'
         }
     })

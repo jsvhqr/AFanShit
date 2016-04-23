@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var steamkey = "E14C83D639FA9E59090649E9FDB10B3E";
+var steamkey = "B90BAAED0012DCB6245ADBC26B2ACF86";
 var steamBaseUri = "https://api.steampowered.com/";
 var lodaKey = "101495620";
 var s4Key = "41231571";
@@ -356,7 +356,7 @@ app.get("/api/match/Details/:id", function (req, res) {
 
     var matchID = req.param("id");
 
-    request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/v001" + steamkey + "&match_id=" + matchID, function (error, response, body) {
+    request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/V001/?match_id=" + matchID + "&key=" + steamkey, function (error, response, body) {
 
         if (!error && response.statusCode === 200) {
             var jsonMatchDetails = JSON.parse(body);
@@ -369,6 +369,9 @@ app.get("/api/match/Details/:id", function (req, res) {
                 res.send([]);
                 console.log("something is wrong :/ " + response.statusCode + " "  + error);
             }
+        }
+        else{
+            console.log("error http :" + response.statusCode);
         }
 
     });

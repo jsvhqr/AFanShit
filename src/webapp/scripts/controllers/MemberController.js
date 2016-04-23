@@ -8,6 +8,8 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     var self = this;
     self.currentMember = $routeParams.teamMember;
     self.matchHistory;
+    self.matchDetails;
+    self.detailsAvailable = false;
     DotaApiService.matchHistory({
         member: self.currentMember
     }).$promise.then(function(result){
@@ -34,7 +36,10 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     };
     
     self.getmatchDetails = function (id) {
-
+        self.matchDetails = DotaApiService.matchDetails({id : id}).$promise.then(function(result){
+            self.matchDetails = result;
+            self.detailsAvailable = true;
+        })
     }
 
 }]);
