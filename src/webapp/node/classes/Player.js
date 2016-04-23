@@ -27,4 +27,4 @@ function Player(account_id, player_slot, hero_id, items, kills, deaths, assists,
 
 }
 
-module.export = Player;
+module.exports = Player;

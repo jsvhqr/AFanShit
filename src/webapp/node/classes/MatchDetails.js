@@ -2,10 +2,9 @@
  * Created by jsvhqr on 22/04/16.
  */
 
-function MatchDetails(players, season, radiant_win, duration, start_time, leagueid, positive_votes, negative_votes, game_mode, picks_bans, radiant_score, dire_score){
+function MatchDetails(players, radiant_win, duration, start_time, leagueid, positive_votes, negative_votes, game_mode, picks_bans, radiant_score, dire_score){
 
     this.players = players;
-    this.season = season;
     this.radiant_win = radiant_win;
     this.duration = duration;
     this.start_time = start_time;
@@ -19,4 +18,4 @@ function MatchDetails(players, season, radiant_win, duration, start_time, league
 
 }
 
-module.export = MatchDetails;
+module.exports = MatchDetails;
