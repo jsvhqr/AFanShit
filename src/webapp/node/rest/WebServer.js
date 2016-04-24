@@ -22,7 +22,19 @@ var egmHistory = new Array();
 var bulldogHistory = new Array();
 var s4History = new Array();
 
-funcs.getHerosAndMatchHistory(steamkey,steamBaseUri,heroes, lodaKey, akkeKey, egmKey,bulldogKey,s4Key,lodaHistory,akkeHistory,egmHistory,bulldogHistory,s4History);
+
+funcs.getHeros(steamkey,steamBaseUri, function(err, data){
+    if(err){
+        console.log(err);
+    }
+    else{
+        heroes = data;
+        funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(err,data){
+            lodaHistory = data;
+        })
+    }
+});
+
 
 
 

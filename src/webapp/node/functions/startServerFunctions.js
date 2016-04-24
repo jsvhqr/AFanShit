@@ -7,9 +7,10 @@ var util = require('../functions/utilFunctions.js');
 var matchObjectReference = require('../classes/MatchObj.js');
 
 
-var getHerosAndMatchHistory = function (steamkey,steamBaseUri,heroes, lodaKey, akkeKey, egmKey,bulldogKey,s4Key,lodaHistory, akkeHistory, egmHistory, bulldogHistory, s4History) {
+var getHeros = function (steamkey,steamBaseUri,callback) {
     request(steamBaseUri + "/IEconDOTA2_570/GetHeroes/v001/?key=" + steamkey + "&language=english", function (error, response, body) {
         if (!error && response.statusCode === 200) {
+            var heroes = new Array();
             var jsonHeros = JSON.parse(body);
             for (var i = 0; i < jsonHeros.result.heroes.length; i++) {
                 var substr = jsonHeros.result.heroes[i].name.substring(14);
@@ -18,22 +19,17 @@ var getHerosAndMatchHistory = function (steamkey,steamBaseUri,heroes, lodaKey, a
                 heroes.push(h);
             }
         }
-        getHistory(steamkey,steamBaseUri, heroes, lodaKey,'Loda',lodaHistory);
-        getHistory(steamkey,steamBaseUri, heroes, akkeKey,'Akke',akkeHistory);
-        getHistory(steamkey,steamBaseUri, heroes, egmKey,'Egm',egmHistory);
-        getHistory(steamkey,steamBaseUri, heroes, bulldogKey,'Bulldog',bulldogHistory);
-        getHistory(steamkey,steamBaseUri, heroes, s4Key,'s4',s4History);
+        callback(null,heroes);
     });
 }
 
-var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, memberHistory){
+var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member,callback){
         request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey, function (error, response, body) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 if (jsonMatchHistory.result.status !== 15) {
-                    memberHistory = new Array();
+                    var memberHistory = new Array();
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
-
                         var hero;
                         var lobby_type;
                         var matchid;
@@ -84,9 +80,12 @@ var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, mem
             }
             console.log(member + " history -> ");
             console.log(memberHistory);
+
+            callback(null,memberHistory);
         });
 
 }
 
 
-module.exports.getHerosAndMatchHistory = getHerosAndMatchHistory;
+module.exports.getHeros = getHeros;
+module.exports.getHistory = getHistory;

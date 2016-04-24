@@ -1,10 +1,11 @@
 {
-  "name"         : "AllianceFanshits",
-  "version"      : "0.0.0",
-  "description"  : "Simple fanshit site",
-  "main"         : "node/WebServer.js",
-  "author"       : "Johan Svedlund Nordström",
-  "dependencies" : {
-    "express"    : "~4.7.2"
-    }
+  "name": "AllianceFanshits",
+  "version": "0.0.0",
+  "description": "Simple fanshit site",
+  "main": "node/WebServer.js",
+  "author": "Johan Svedlund Nordström",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "express": "~4.7.2"
+  }
 }
