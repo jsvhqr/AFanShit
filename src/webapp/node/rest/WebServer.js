@@ -78,7 +78,7 @@ app.get("/api/match/History/:member", function (req, res) {
         if (!error && response.statusCode === 200) {
             var jsonMatchHistory = JSON.parse(body);
             if (jsonMatchHistory.result.status !== 15) {
-                if(jsonMatchHistory.result.matches[0].match_id == memberHistory[0].match.id){
+                if(jsonMatchHistory.result.matches[0].match_id == memberHistory[0].id){
                     res.send(JSON.stringify(memberHistory));
                 }
                 else

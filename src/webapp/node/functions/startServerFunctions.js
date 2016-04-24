@@ -75,13 +75,9 @@ var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member,call
                         memberHistory.push(match);
 
                     }
+                    callback(null,memberHistory);
                 }
-
             }
-            console.log(member + " history -> ");
-            console.log(memberHistory);
-
-            callback(null,memberHistory);
         });
 
 }
