@@ -76,14 +76,13 @@ var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, mem
                         }
 
                         var match = new matchObjectReference(hero, lobby_type, matchid);
-                        console.log("Added match to " + member + 's History');
                         memberHistory.push(match);
 
                     }
                 }
 
             }
-
+            console.log(member + " history -> ");
             console.log(memberHistory);
         });
 
