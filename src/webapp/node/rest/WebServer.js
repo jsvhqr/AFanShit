@@ -29,21 +29,56 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
     }
     else{
         heroes = data;
-        funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(err,data){
-            lodaHistory = data;
-        })
-	funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(err,data){
-            akkeHistory = data;
-        })
-	funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(err,data){
-            egmHistory = data;
-        })
-	funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(err,data){
-            bulldogHistory = data;
-        })
-	funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(err,data){
-            s4History = data;
-        })
+        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(error,data){
+            if(!err){
+                lodaHistory = data;
+                console.log("updated Lodas matchHistory ");
+                console.log(data);
+            }
+            else{
+                console.log(err);
+            }
+        }),600000);
+        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(error,data){
+            if(!err){
+                akkeHistory = data;
+                console.log("updated Akkes matchHistory ");
+                console.log(data);
+            }
+            else{
+                console.log(err);
+            }
+        }),600000);
+        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(error,data){
+            if(!err){
+                egmHistory = data;
+                console.log("updated Egms matchHistory ");
+                console.log(data);
+            }
+            else{
+                console.log(err);
+            }
+        }),600000);
+        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(error,data){
+            if(!err){
+                bulldogHistory = data;
+                console.log("updated Bulldogs matchHistory ");
+                console.log(data);
+            }
+            else{
+                console.log(err);
+            }
+        }),600000);
+        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(error,data){
+            if(!err){
+                s4History = data;
+                console.log("updated s4s matchHistory ");
+                console.log(data);
+            }
+            else{
+                console.log(err);
+            }
+        }),600000);
     }
 });
 
@@ -63,100 +98,22 @@ app.use(express.static('../'));
 app.get("/api/match/History/:member", function (req, res) {
     console.log('request for : ' + req.param("member") + " matchhistory");
     var memberreq = req.param("member");
-    var keytouse;
-    var memberHistory;
+
     if(memberreq === 'Loda'){
-        keytouse = lodaKey;
-        memberHistory = lodaHistory;
+        res.send(lodaHistory);
     }else if(memberreq === 'Akke'){
-        keytouse = akkeKey;
-        memberHistory = akkeHistory;
+        res.send(akkeHistory);
     }
     else if(memberreq === 'Egm'){
-        keytouse = egmKey;
-        memberHistory = egmHistory;
+        res.send(egmHistory);
     }
     else if(memberreq === 'Bulldog'){
-        keytouse = bulldogKey;
-        memberHistory = bulldogHistory;
+        res.send(bulldogHistory);
     }
     else if(memberreq === 's4'){
-        keytouse = s4Key;
-        memberHistory = s4History;
+        res.send(s4History);
     }
-    request(steamBaseUri + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamkey + "&account_id=" + keytouse, function (error, response, body) {
-        if (!error && response.statusCode === 200) {
-            var jsonMatchHistory = JSON.parse(body);
-            if (jsonMatchHistory.result.status !== 15) {
-                if(jsonMatchHistory.result.matches[0].match_id == memberHistory[0].id){
-                    res.send(JSON.stringify(memberHistory));
-                }
-                else
-                {
-                    var history = new Array();
 
-                    for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
-
-                        var hero;
-                        var lobby_type;
-                        var matchid;
-
-                        matchid = jsonMatchHistory.result.matches[i].match_id;
-                        switch (jsonMatchHistory.result.matches[i].lobby_type) {
-                            case 0 :
-                                lobby_type = "Public matchmaking"
-                                break;
-                            case 1 :
-                                lobby_type = "Practise"
-                                break;
-                            case 2 :
-                                lobby_type = "Tournament game"
-                                break;
-                            case 3 :
-                                lobby_type = "Tutorial "
-                                break;
-                            case 4 :
-                                lobby_type = "Bot game"
-                                break;
-                            case 5 :
-                                lobby_type = "Team match"
-                                break;
-                            case 6 :
-                                lobby_type = "Solo queue"
-                                break;
-                            case 7 :
-                                lobby_type = "Ranked matchmaking"
-                                break;
-                            default:
-                                lobby_type = "1v1 Solo mid"
-
-                        }
-
-                        for (var j = 0; j < jsonMatchHistory.result.matches[i].players.length; j++) {
-                            if (jsonMatchHistory.result.matches[i].players[j].account_id == keytouse) {
-                                hero = util.getHeroPlayed(jsonMatchHistory.result.matches[i].players[j].hero_id, heroes);
-                            }
-                        }
-
-                        var match = new matchObjectReference(hero, lobby_type, matchid);
-                        history.push(match);
-                    }
-
-                    var json = JSON.stringify(history);
-                    res.send(json);
-
-                }
-            }
-            else {
-                console.log("something is wrong :/ " + response.statusCode + " " + error);
-                res.send([]);
-            }
-
-        } else {
-            console.log("something is wrong :/ " + response.statusCode + " " + error);
-            res.send([]);
-        }
-    });
 });
 
 app.get("/api/match/Details/:id", function (req, res) {
