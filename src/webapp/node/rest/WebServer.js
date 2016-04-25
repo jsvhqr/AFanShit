@@ -29,7 +29,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
     }
     else{
         heroes = data;
-        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(error,data){
             if(!err){
                 lodaHistory = data;
                 console.log("updated Lodas matchHistory ");
@@ -38,8 +38,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
             else{
                 console.log(err);
             }
-        }),600000);
-        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(error,data){
+        });},600000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(error,data){
             if(!err){
                 akkeHistory = data;
                 console.log("updated Akkes matchHistory ");
@@ -48,8 +48,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
             else{
                 console.log(err);
             }
-        }),600000);
-        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(error,data){
+        });},600000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(error,data){
             if(!err){
                 egmHistory = data;
                 console.log("updated Egms matchHistory ");
@@ -58,8 +58,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
             else{
                 console.log(err);
             }
-        }),600000);
-        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(error,data){
+        });},600000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(error,data){
             if(!err){
                 bulldogHistory = data;
                 console.log("updated Bulldogs matchHistory ");
@@ -68,8 +68,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
             else{
                 console.log(err);
             }
-        }),600000);
-        setInterval(funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(error,data){
+        });},600000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(error,data){
             if(!err){
                 s4History = data;
                 console.log("updated s4s matchHistory ");
@@ -78,7 +78,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
             else{
                 console.log(err);
             }
-        }),600000);
+        });},600000);
     }
 });
 
