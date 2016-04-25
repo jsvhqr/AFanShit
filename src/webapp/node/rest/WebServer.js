@@ -32,6 +32,22 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
         funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(err,data){
             lodaHistory = data;
         })
+	funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(err,data){
+            akkeHistory = data;
+        })
+	funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(err,data){
+            egmHistory = data;
+        })
+	funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(err,data){
+            bulldogHistory = data;
+        })
+	funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(err,data){
+            s4History = data;
+        })
+
+
+
+
     }
 });
 
@@ -44,11 +60,11 @@ app.get("/", function (req, res) {
         req.socket.remoteAddress ||
         req.connection.socket.remoteAddress;
     console.log("Request from " + ip + " for " + req.path);
-    res.sendfile(path.resolve('../index.html'));
+    res.sendfile(path.resolve('../../index.html'));
 });
 
 /* serves all the static files */
-app.use(express.static('..'));
+app.use(express.static('../../'));
 
 app.get("/api/match/History/:member", function (req, res) {
     console.log('request for : ' + req.param("member") + " matchhistory");
