@@ -104,15 +104,15 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                     var is_member = isMember(memberkey,currentplayer.account_id);
                     var is_dire =  isDire(currentplayer.player_slot & 128, 1);
 
-                    var items = new Array();
-                    items.push(item(currentplayer.item_0,items));
-                    items.push(item(currentplayer.item_1,items));
-                    items.push(item(currentplayer.item_2,items));
-                    items.push(item(currentplayer.item_3,items));
-                    items.push(item(currentplayer.item_4,items));
-                    items.push(item(currentplayer.item_5,items));
+                    var this_player_items = new Array();
+                    this_player_items.push(item(currentplayer.item_0,items));
+                    this_player_items.push(item(currentplayer.item_1,items));
+                    this_player_items.push(item(currentplayer.item_2,items));
+                    this_player_items.push(item(currentplayer.item_3,items));
+                    this_player_items.push(item(currentplayer.item_4,items));
+                    this_player_items.push(item(currentplayer.item_5,items));
 
-                    players.push(new playerReference(this_player_slot,this__player_hero,items,this_player_kda,this_player_gold,this_player_cs,this_player_gpm,this_player_xpm,this_player_hero_dmg,this_player_tower_dmg,this_player_hero_healing,this_player_level,is_member,is_dire));
+                    players.push(new playerReference(this_player_slot,this__player_hero,this_player_items,this_player_kda,this_player_gold,this_player_cs,this_player_gpm,this_player_xpm,this_player_hero_dmg,this_player_tower_dmg,this_player_hero_healing,this_player_level,is_member,is_dire));
 
 
                 }
