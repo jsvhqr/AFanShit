@@ -49,15 +49,16 @@ var getHeros = function (steamkey,steamBaseUri,callback) {
     });
 }
 
-var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, memberHistory, callback){
+var getHistory = function(steamKey, steamBaseURI, heroes,items, memberkey, member, memberHistory, callback){
         request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey, function (error, response, body) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 if (jsonMatchHistory.result.status !== 15) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
-                        createMatchObject(steamKey,steamBaseURI,heroes,memberkey,jsonMatchHistory.result.matches[i].match_id,jsonMatchHistory.result.matches[i].start_time,jsonMatchHistory.result.matches[i].lobby_type,jsonMatchHistory.result.matches[i].players,function(err,result){
+                        createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,jsonMatchHistory.result.matches[i].match_id,jsonMatchHistory.result.matches[i].start_time,jsonMatchHistory.result.matches[i].lobby_type,jsonMatchHistory.result.matches[i].players,function(err,result){
                             if(!err){
                                 memberHistory.push(result);
+                                console.log(result);
                                 callback(null,jsonMatchHistory.result.matches[i].match_id);
                             }
                             else{
@@ -70,9 +71,9 @@ var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, mem
         });
 }
 
-var createMatchObject = function(steamKey, steamBaseURI, heroes, memberkey, match_id, start_time, lobby_type, players, callback){
+var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberkey, match_id, start_time, lobby_type, players, callback){
 
-    request(steamBaseURI + "IDOTA2Match_570/GetMatchDetails/V001/?match_id=" + match_id + "&key=" + steamKey, function (error, response, body) {
+    request(steamBaseURI + "IDOTA2Match_570/GetMatchDetails/V001/?key=" + steamKey + "&match_id=" + match_id, function (error, response, body) {
 
         var matchObject;
         var hero;
