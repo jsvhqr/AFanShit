@@ -16,11 +16,11 @@ isMember  = function(memberKey,account_id){
 }
 
 
-itemURI = function (itemID, itemsAndUris) {
+item = function (itemID, items) {
     
-    for(var i = 0;i<itemsAndUris.length;i++){
-        if(itemID == itemsAndUris[i].id){
-            return itemsAndUris[i].uri;
+    for(var i = 0;i<items.length;i++){
+        if(itemID == items[i].id){
+            return items[i].name;
         }
     }
 
@@ -34,6 +34,6 @@ module.exports.getHeroPlayed = getHeroPlayed;
 
 module.exports.isMember = isMember;
 
-module.exports.itemURI = itemURI;
+module.exports.item = item;
 
 module.exports.isDire = isDire;

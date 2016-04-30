@@ -7,40 +7,30 @@ var util = require('../functions/utilFunctions.js');
 var matchObjectReference = require('../classes/MatchObj.js');
 var playerReference = require('../classes/Player');
 var matchdetailsReference = require('../classes/MatchDetails');
+var itemsReference = require('../classes/Item.js');
+
 
 var getItems = function (steamKey,steamBaseUri, callback) {
 
-    request(steamBaseUri + "IEconDOTA2_570/GetGameItems/v001/?key=" + steamkey + "&language=english", function (error, response, body) {
+    request(steamBaseUri + "IEconDOTA2_570/GetGameItems/v001/?key=" + steamKey + "&language=english", function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            var jsonItems = JSON.parse(body);
 
-        var jsonItems = JSON.parse(body);
-        callback(null,jsonItems.items);
+            callback(null,jsonItems.result.items);
+            var items = new Array();
+            for(var i=0;i<jsonItems.result.items.length;i++){
+                var substr = jsonItems.result.items[i].name.substring(5);
+                console.log("Added new item to memorydb, name: " + substr +" id: " + jsonItems.result.items[i].id);
+                var item = new itemsReference(jsonItems.result.items[i].id,substr);
+                items.push(item);
+            }
+            callback(null,items);
+        }
+
 
     });
 
     
-}
-
-var getItemURIs = function (items, steamKey, steamBaseUri, callback) {
-
-    var itemsNameAndUris = new Array();
-    for(var i=0; i<items.length; i++){
-
-        request(steamBaseUri + "IEconDOTA2_570/GetGameItems/v001/?key=" + steamkey + "&iconname=" + items[i].name + "&icontype=0", function (error, response, body) {
-
-            var jsonItemURI = JSON.parse(body);
-            var itemAndUri = {
-                name : items[i].name,
-                uri : jsonItemURI.result,
-                id : items[i].id
-            }
-            console.log(itemAndUri);
-            itemsNameAndUris.push(itemAndUri);
-        });
-
-    }
-
-    callback(null,itemsNameAndUris);
-
 }
 
 var getHeros = function (steamkey,steamBaseUri,callback) {
@@ -82,7 +72,7 @@ var getHistory = function(steamKey, steamBaseURI, heroes, memberkey, member, mem
 
 var createMatchObject = function(steamKey, steamBaseURI, heroes, memberkey, match_id, start_time, lobby_type, players, callback){
 
-    request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/V001/?match_id=" + match_id + "&key=" + steamKey, function (error, response, body) {
+    request(steamBaseURI + "IDOTA2Match_570/GetMatchDetails/V001/?match_id=" + match_id + "&key=" + steamKey, function (error, response, body) {
 
         var matchObject;
         var hero;
@@ -114,12 +104,12 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, memberkey, matc
                     var is_dire =  isDire(currentplayer.player_slot & 128, 1);
 
                     var items = new Array();
-                    items.push(itemURI(currentplayer.item_0));
-                    items.push(itemURI(currentplayer.item_1));
-                    items.push(itemURI(currentplayer.item_2));
-                    items.push(itemURI(currentplayer.item_3));
-                    items.push(itemURI(currentplayer.item_4));
-                    items.push(itemURI(currentplayer.item_5));
+                    items.push(item(currentplayer.item_0,items));
+                    items.push(item(currentplayer.item_1,items));
+                    items.push(item(currentplayer.item_2,items));
+                    items.push(item(currentplayer.item_3,items));
+                    items.push(item(currentplayer.item_4,items));
+                    items.push(item(currentplayer.item_5,items));
 
                     players.push(new playerReference(this_player_slot,this__player_hero,items,this_player_kda,this_player_gold,this_player_cs,this_player_gpm,this_player_xpm,this_player_hero_dmg,this_player_tower_dmg,this_player_hero_healing,this_player_level,is_member,is_dire));
 
@@ -164,4 +154,3 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, memberkey, matc
 module.exports.getHeros = getHeros;
 module.exports.getHistory = getHistory;
 module.exports.getItems = getItems;
-module.exports.getItemURIs = getItemURIs;

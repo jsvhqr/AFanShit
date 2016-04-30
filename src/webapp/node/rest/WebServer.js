@@ -11,7 +11,7 @@ var egmKey = "3916428";
 var akkeKey = "41288955";
 var request = require('request');
 var heroes = new Array();
-var itemsURIs = new Array();
+var items = new Array();
 var funcs = require('../functions/startServerFunctions');
 var lodaHistory = new Array();
 var akkeHistory = new Array();
@@ -26,11 +26,9 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
     }else{
         heroes = data;
         funcs.getItems(steamkey,steamBaseUri,function(err,data){
-            funcs.getItemURIs(data,steamkey,steamBaseUri,function(err,data){
-                itemsURIs = data;
-            });
+            items= data;
         });
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,lodaKey,lodaHistory,'Loda',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,lodaKey,lodaHistory,'Loda',function(error,data){
             if(!err){
                 console.log("updated Lodas matchHistory ");
                 console.log(data);
@@ -39,7 +37,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
                 console.log(err);
             }
         });},60000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,akkeKey,akkeHistory,'Akke',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,akkeKey,akkeHistory,'Akke',function(error,data){
             if(!err){
                 console.log("updated Akkes matchHistory ");
                 console.log(data);
@@ -48,7 +46,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
                 console.log(err);
             }
         });},60000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,egmKey,egmHistory,'Egm',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,egmKey,egmHistory,'Egm',function(error,data){
             if(!err){
                 console.log("updated Egms matchHistory ");
                 console.log(data);
@@ -57,7 +55,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
                 console.log(err);
             }
         });},60000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,bulldogKey,bulldogHistory,'Bulldog',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,bulldogKey,bulldogHistory,'Bulldog',function(error,data){
             if(!err){
                 console.log("updated Bulldogs matchHistory ");
                 console.log(data);
@@ -66,7 +64,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, data){
                 console.log(err);
             }
         });},60000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,s4Key,s4History,'s4',function(error,data){
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,s4Key,s4History,'s4',function(error,data){
             if(!err){
                 console.log("updated s4s matchHistory ");
                 console.log(data);
