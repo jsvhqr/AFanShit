@@ -11,4 +11,29 @@ getHeroPlayed = function(id,hs) {
     return "unknown";
 }
 
+isMember  = function(memberKey,account_id){
+    return memberKey == account_id;
+}
+
+
+itemURI = function (itemID, itemsAndUris) {
+    
+    for(var i = 0;i<itemsAndUris.length;i++){
+        if(itemID == itemsAndUris[i].id){
+            return itemsAndUris[i].uri;
+        }
+    }
+
+}
+
+isDire = function(a,b){
+    return a == b;
+}
+
 module.exports.getHeroPlayed = getHeroPlayed;
+
+module.exports.isMember = isMember;
+
+module.exports.itemURI = itemURI;
+
+module.exports.isDire = isDire;

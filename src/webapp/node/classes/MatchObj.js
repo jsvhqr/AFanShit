@@ -3,10 +3,15 @@
  */
 
 
-function MatchObject(hero, lobby_type, id) {
+function MatchObject(hero, match_type, result, start_time, kda, details) {
+
     this.hero = hero;
-    this.lobby_type = lobby_type;
-    this.id = id;
+    this.match_type = match_type;
+    this.result = result;
+    this.start_time = start_time;
+    this.kda = kda;
+    this.details = details;
+
 }
 
 module.exports = MatchObject;

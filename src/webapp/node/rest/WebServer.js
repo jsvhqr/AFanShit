@@ -11,11 +11,8 @@ var egmKey = "3916428";
 var akkeKey = "41288955";
 var request = require('request');
 var heroes = new Array();
-var matchDetails = new Array();
-var matchDetailsReference = require('../classes/MatchDetails');
+var itemsURIs = new Array();
 var funcs = require('../functions/startServerFunctions');
-var util = require('../functions/utilFunctions.js');
-var matchObjectReference = require('../classes/MatchObj.js');
 var lodaHistory = new Array();
 var akkeHistory = new Array();
 var egmHistory = new Array();
@@ -26,59 +23,58 @@ var s4History = new Array();
 funcs.getHeros(steamkey,steamBaseUri, function(err, data){
     if(err){
         console.log(err);
-    }
-    else{
+    }else{
         heroes = data;
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,lodaKey,'Loda',function(error,data){
+        funcs.getItems(steamkey,steamBaseUri,function(err,data){
+            funcs.getItemURIs(data,steamkey,steamBaseUri,function(err,data){
+                itemsURIs = data;
+            });
+        });
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,lodaKey,lodaHistory,'Loda',function(error,data){
             if(!err){
-                lodaHistory = data;
                 console.log("updated Lodas matchHistory ");
                 console.log(data);
             }
             else{
                 console.log(err);
             }
-        });},600000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,akkeKey,'Akke',function(error,data){
+        });},60000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,akkeKey,akkeHistory,'Akke',function(error,data){
             if(!err){
-                akkeHistory = data;
                 console.log("updated Akkes matchHistory ");
                 console.log(data);
             }
             else{
                 console.log(err);
             }
-        });},600000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,egmKey,'Egm',function(error,data){
+        });},60000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,egmKey,egmHistory,'Egm',function(error,data){
             if(!err){
-                egmHistory = data;
                 console.log("updated Egms matchHistory ");
                 console.log(data);
             }
             else{
                 console.log(err);
             }
-        });},600000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,bulldogKey,'Bulldog',function(error,data){
+        });},60000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,bulldogKey,bulldogHistory,'Bulldog',function(error,data){
             if(!err){
-                bulldogHistory = data;
                 console.log("updated Bulldogs matchHistory ");
                 console.log(data);
             }
             else{
                 console.log(err);
             }
-        });},600000);
-        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,s4Key,'s4',function(error,data){
+        });},60000);
+        setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,itemsURIs,s4Key,s4History,'s4',function(error,data){
             if(!err){
-                s4History = data;
                 console.log("updated s4s matchHistory ");
                 console.log(data);
             }
             else{
                 console.log(err);
             }
-        });},600000);
+        });},60000);
     }
 });
 
@@ -113,33 +109,6 @@ app.get("/api/match/History/:member", function (req, res) {
     else if(memberreq === 's4'){
         res.send(s4History);
     }
-
-});
-
-app.get("/api/match/Details/:id", function (req, res) {
-
-    console.log('request for : ' + req.param("id") + " matchdetails");
-
-    var matchID = req.param("id");
-
-    request(steamBaseUri + "IDOTA2Match_570/GetMatchDetails/V001/?match_id=" + matchID + "&key=" + steamkey, function (error, response, body) {
-
-        if (!error && response.statusCode === 200) {
-            var jsonMatchDetails = JSON.parse(body);
-            if(jsonMatchDetails.result.status !== 15){
-
-            }
-            else{
-                res.send([]);
-                console.log("something is wrong :/ " + response.statusCode + " "  + error);
-            }
-        }
-        else{
-            console.log("error http :" + response.statusCode);
-        }
-
-    });
-
 
 });
 
