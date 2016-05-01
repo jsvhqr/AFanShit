@@ -49,7 +49,7 @@ var getHeros = function (steamkey,steamBaseUri,callback) {
     });
 }
 
-var getHistory = function(steamKey, steamBaseURI, heroes,items, memberkey, member, memberHistory, callback){
+var getHistory = function(steamKey, steamBaseURI, heroes,items, memberkey, memberHistory, member, callback){
         request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey, function (error, response, body) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
