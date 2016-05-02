@@ -84,7 +84,7 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
 
         var players = new Array();
 
-        if (!error && response.statusCode === 200) {
+        if (!error && response && response.statusCode === 200) {
             var jsonMatchDetails = JSON.parse(body);
             if(jsonMatchDetails.result.status !== 15){
 
@@ -147,7 +147,6 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
         else{
             callback("error",null);
         }
-
     });
 
 }

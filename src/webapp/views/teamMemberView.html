@@ -38,7 +38,7 @@
                         <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
                     </div>
                     <div class="col-md-8">
-                        <label style="color:white;">Lobby : {{match.lobby_type}}</label>
+                        <label style="color:white;">Date : {{memberController.getStartTime(match.start_time)}}</label>
                         <label style="color:white;">Match ID : {{match.id}}</label>
                         <a class="badge" ng-click="memberController.getmatchDetails(match.id)">match details</a>
                     </div>

@@ -13,21 +13,15 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
     DotaApiService.matchHistory({
         member: self.currentMember
     }).$promise.then(function(result){
-        self.matchHistory = result;
-    });
-    self.channel;
 
-    if(self.currentMember === 'Akke'){
-        self.channel = 'followAkke';
-    }else if(self.currentMember === 'Loda'){
-        self.channel = 'LiveAndLetLoda';
-    }else if(self.currentMember === 'EGM'){
-        self.channel = 'egm';
-    }else if(self.currentMember === 'Bulldog'){
-        self.channel = 'admiralBulldog';
-    }else if(self.currentMember === 's4'){
-        self.channel = 's4';
-    }
+        var unsortedArray = result;
+        unsortedArray.sort(function(x,y){
+            x.start_time - y.start_time;
+        })
+
+        self.matchHistory = unsortedArray;
+
+    });
 
     self.pageSize = 8;
     self.currentPage = 0;
@@ -40,6 +34,24 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
             self.matchDetails = result;
             self.detailsAvailable = true;
         })
+    }
+
+    self.getStartTime = function (unix_timestamp) {
+
+
+        var date = new Date(unix_timestamp*1000);
+        // Hours part from the timestamp
+        var hours = date.getHours();
+        // Minutes part from the timestamp
+        var minutes = "0" + date.getMinutes();
+        // Seconds part from the timestamp
+        var seconds = "0" + date.getSeconds();
+
+        // Will display time in 10:30:23 format
+        var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+        return formattedTime;
+
     }
 
 }]);
