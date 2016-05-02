@@ -55,16 +55,18 @@ var getHistory = function(steamKey, steamBaseURI, heroes,items, memberkey, membe
                 var jsonMatchHistory = JSON.parse(body);
                 if (jsonMatchHistory.result.status !== 15) {
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
-                        createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,jsonMatchHistory.result.matches[i].match_id,jsonMatchHistory.result.matches[i].start_time,jsonMatchHistory.result.matches[i].lobby_type,jsonMatchHistory.result.matches[i].players,function(err,result){
+                        var currentMatch = jsonMatchHistory.result.matches[i];
+                        createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,currentMatch.start_time,currentMatch.lobby_type,currentMatch.players,function(err,result){
                             if(!err){
                                 memberHistory.push(result);
                                 console.log(result);
-                                callback(null,jsonMatchHistory.result.matches[i].match_id);
                             }
                             else{
                                 callback(err,[]);
                             }
                         })
+
+                        callback(null,currentMatch.match_id);
                     }
                 }
             }
@@ -121,28 +123,29 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                     if(details.players[j].is_member){
                         hero = details.players[j].hero;
                         if(!details.players[j].is_dire && jsonMatchDetails.result.radiant_win){
-                            result = true;
-                        }else{
-                            result = false;
+                            result = "win";
+                        }else if(details.players[j].is_dire && !jsonMatchDetails.result.radiant_win){
+                            result = "win";
+                        }
+                        else {
+                            result = "loss";
                         }
                         kda = details.players[j].kda;
 
                     }
                 }
 
-                matchObject = new matchObjectReference(hero,getMatchType(jsonMatchDetails.result.lobby_type),result,jsonMatchDetails.start_time,kda,details);
+                matchObject = new matchObjectReference(hero,getMatchType(lobby_type),result,start_time,kda,details);
 
                 callback(null,matchObject);
 
             }
             else{
                 callback("error",null);
-                console.log("something is wrong :/ " + response.statusCode + " "  + error);
             }
         }
         else{
             callback("error",null);
-            console.log("error http :" + response.statusCode);
         }
 
     });
