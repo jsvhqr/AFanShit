@@ -16,7 +16,7 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
 
         var unsortedArray = result;
         unsortedArray.sort(function(x,y){
-            x.start_time - y.start_time;
+            y.start_time - x.start_time;
         })
 
         self.matchHistory = unsortedArray;

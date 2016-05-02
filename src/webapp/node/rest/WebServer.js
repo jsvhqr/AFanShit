@@ -20,13 +20,13 @@ var bulldogHistory = new Array();
 var s4History = new Array();
 
 
-funcs.getHeros(steamkey,steamBaseUri, function(err, data){
+funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
     if(err){
         console.log(err);
     }else{
-        heroes = data;
-        funcs.getItems(steamkey,steamBaseUri,function(err,data){
-            items=data;
+        heroes = resheros;
+        funcs.getItems(steamkey,steamBaseUri,function(err,resitems){
+            items = resitems;
             setInterval(function(){funcs.getHistory(steamkey,steamBaseUri,heroes,items,lodaKey,lodaHistory,'Loda',function(error,data){
                 if(!err){
                     console.log("updated Lodas matchHistory ");
