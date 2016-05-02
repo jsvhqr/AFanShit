@@ -13,7 +13,7 @@ var itemsReference = require('../classes/Item.js');
 var getItems = function (steamKey,steamBaseUri, callback) {
 
     request(steamBaseUri + "IEconDOTA2_570/GetGameItems/v001/?key=" + steamKey + "&language=english", function (error, response, body) {
-        if (!error && response.statusCode === 200) {
+        if (!error && response && response.statusCode === 200) {
             var jsonItems = JSON.parse(body);
 
             callback(null,jsonItems.result.items);
@@ -26,6 +26,7 @@ var getItems = function (steamKey,steamBaseUri, callback) {
             }
             callback(null,items);
         }
+        callback("error", null);
 
 
     });
