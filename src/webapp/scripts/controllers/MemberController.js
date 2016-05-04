@@ -14,12 +14,7 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
         member: self.currentMember
     }).$promise.then(function(result){
 
-        var unsortedArray = result;
-        unsortedArray.sort(function(x,y){
-            y.start_time - x.start_time;
-        })
-
-        self.matchHistory = unsortedArray;
+        self.matchHistory = result;
 
     });
 
@@ -45,10 +40,12 @@ angular.module('AllianceFanshits').controller('MemberController', ['$routeParams
             var hour = a.getHours();
             var min = a.getMinutes();
             var sec = a.getSeconds();
-            var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+            var time = date + ' ' + month + ' ' + year + ' ' + self.n(hour) + ':' + self.n(min) + ':' + self.n(sec) ;
             return time;
         }
 
-
+    self.n = function(n){
+        return n > 9 ? "" + n: "0" + n;
+    }
 
 }]);

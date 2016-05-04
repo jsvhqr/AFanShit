@@ -56,6 +56,18 @@
 
     }
 
+    compare = function(a,b){
+        if(a.start_time > b.start_time){
+            return -1;
+        }
+        else if(a.start_time < b.start_time){
+            return 1;
+        }else{
+
+            return 0;
+        }
+    }
+
     module.exports.getHeroPlayed = getHeroPlayed;
 
     module.exports.isMember = isMember;
@@ -65,3 +77,5 @@
     module.exports.isDire = isDire;
 
     module.exports.getMatchType = getMatchType;
+
+    module.exports.compare = compare;

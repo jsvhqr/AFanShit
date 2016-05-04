@@ -50,28 +50,38 @@ var getHeros = function (steamkey,steamBaseUri,callback) {
     });
 }
 
-var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, memberHistory, member, callback){
+var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, callback){
+        var memberHistory = new Array();
+        var length;
         request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey, function (error, response, body) {
             if (!error && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 if (jsonMatchHistory.result.status !== 15) {
+                    length = jsonMatchHistory.result.matches.length;
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
                         var currentMatch = jsonMatchHistory.result.matches[i];
                         createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,currentMatch.start_time,currentMatch.lobby_type,currentMatch.players,function(err,result){
                             if(!err){
+                                length = length - 1;
                                 memberHistory.push(result);
                                 console.log(result);
+                                if(length === 0){
+                                    callback(null,memberHistory);
+                                }
                             }
                             else{
-                                callback(err,[]);
+                                console.log("error creating matchObject");
                             }
                         })
-
-                        callback(null,currentMatch.match_id);
                     }
+
                 }
             }
         });
+}
+
+var updateHistory = function (steamKey, steamBaseURI, heroes, items, memberkey, callback) {
+
 }
 
 var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberkey, match_id, start_time, lobby_type, players, callback){
@@ -158,3 +168,4 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
 module.exports.getHeros = getHeros;
 module.exports.getHistory = getHistory;
 module.exports.getItems = getItems;
+module.exports.updateHistory = updateHistory;
