@@ -6,6 +6,7 @@
   "author": "Johan Svedlund Nordström",
   "dependencies": {
     "async": "^2.0.0-rc.3",
-    "express": "~4.7.2"
+    "express": "~4.7.2",
+    "lodash": "^4.11.2"
   }
 }

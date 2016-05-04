@@ -20,7 +20,6 @@ var bulldogHistory = new Array();
 var s4History = new Array();
 var util = require('../functions/utilFunctions');
 
-
 funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
     if(err){
         console.log(err);
@@ -36,7 +35,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
                     lodaHistory.sort(util.compare);
                     setInterval(function(){
                         funcs.updateHistory(steamkey, steamBaseUri, heroes, items, lodaKey, function(err,data){
-                            
+                            lodaHistory.concat(data);
+                            _.uniq(lodaHistory);
                         });
                     },60000);
                 }
@@ -52,7 +52,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
                     akkeHistory.sort(util.compare);
                     setInterval(function(){
                         funcs.updateHistory(steamkey, steamBaseUri, heroes, items, akkeKey, function(err,data){
-
+                            akkeHistory.concat(data);
+                            _.uniq(akkeHistory);
                         });
                     },60000);
                 }
@@ -68,7 +69,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
                     egmHistory.sort(util.compare);
                     setInterval(function(){
                         funcs.updateHistory(steamkey, steamBaseUri, heroes, items, egmKey, function(err,data){
-
+                            egmHistory.concat(data);
+                            _.uniq(egmHistory);
                         });
                     },60000);
                 }
@@ -84,7 +86,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
                     bulldogHistory.sort(util.compare);
                     setInterval(function(){
                         funcs.updateHistory(steamkey, steamBaseUri, heroes, items, bulldogKey, function(err,data){
-
+                            bulldogHistory.concat(data);
+                            _.uniq(bulldogHistory);
                         });
                     },60000);
                 }
@@ -100,7 +103,8 @@ funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
                     s4History.sort(util.compare);
                     setInterval(function(){
                         funcs.updateHistory(steamkey, steamBaseUri, heroes, items, s4Key, function(err,data){
-
+                            s4History.concat(data);
+                            _.uniq(s4History);
                         });
                     },60000);
                 }
