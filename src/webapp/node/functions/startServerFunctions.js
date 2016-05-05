@@ -15,8 +15,6 @@ var getItems = function (steamKey,steamBaseUri, callback) {
     request(steamBaseUri + "IEconDOTA2_570/GetGameItems/v001/?key=" + steamKey + "&language=english", function (error, response, body) {
         if (!error && response && response.statusCode === 200) {
             var jsonItems = JSON.parse(body);
-
-            callback(null,jsonItems.result.items);
             var items = new Array();
             for(var i=0;i<jsonItems.result.items.length;i++){
                 var substr = jsonItems.result.items[i].name.substring(5);
@@ -53,24 +51,29 @@ var getHeros = function (steamkey,steamBaseUri,callback) {
 var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, callback){
         var memberHistory = new Array();
         var length;
+        var done = 0;
         request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey, function (error, response, body) {
-            if (!error && response.statusCode === 200) {
+            if (!error && response && response.statusCode === 200) {
                 var jsonMatchHistory = JSON.parse(body);
                 if (jsonMatchHistory.result.status !== 15) {
                     length = jsonMatchHistory.result.matches.length;
                     for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
                         var currentMatch = jsonMatchHistory.result.matches[i];
-                        createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,currentMatch.start_time,currentMatch.lobby_type,currentMatch.players,function(err,result){
+                        createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,function(err,result){
                             if(!err){
-                                length = length - 1;
-                                memberHistory.push(result);
+                                done = done + 1;
+                                if(result !== null){
+                                    memberHistory.push(result);
+                                }
                                 console.log(result);
-                                if(length === 0){
+                                if(length === done){
                                     callback(null,memberHistory);
                                 }
-                            }
-                            else{
-                                console.log("error creating matchObject");
+                                console.log(done);
+                            }else{
+                                done = done + 1;
+                                console.log(err);
+                                console.log(done);
                             }
                         })
                     }
@@ -80,24 +83,61 @@ var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, call
         });
 }
 
-var updateHistory = function (steamKey, steamBaseURI, heroes, items, memberkey, callback) {
+var updateHistory = function (steamKey, steamBaseURI, heroes, items, memberkey, start_time_of_latest_match, callback) {
+
+    var newMatches = new Array();
+    var length;
+
+    request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey + "&date_min=" + start_time_of_latest_match, function (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            var jsonMatchHistory = JSON.parse(body);
+            if (jsonMatchHistory.result.status !== 15) {
+                length = jsonMatchHistory.result.matches.length;
+                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
+                    var currentMatch = jsonMatchHistory.result.matches[i];
+                    createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,currentMatch.start_time,currentMatch.lobby_type,currentMatch.players,function(err,result){
+                        if(!err){
+                            length = length - 1;
+                            newMatches.push(result);
+                            console.log(result);
+                            if(length === 0){
+                                callback(null,newMatches);
+                            }
+                        }
+                        else{
+
+                            length = length - 1;
+                            console.log(err);
+                        }
+                    })
+                }
+
+            }
+        }
+    });
 
 }
 
-var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberkey, match_id, start_time, lobby_type, players, callback){
+var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberkey, match_id, callback){
 
     request(steamBaseURI + "IDOTA2Match_570/GetMatchDetails/V001/?key=" + steamKey + "&match_id=" + match_id, function (error, response, body) {
 
         var matchObject;
         var hero;
-        var result;
+        var match_type;
+        var start_time;
+        var result_win;
         var kda;
+        var details;
 
         var players = new Array();
 
         if (!error && response && response.statusCode === 200) {
             var jsonMatchDetails = JSON.parse(body);
             if(jsonMatchDetails.result.status !== 15){
+
+                match_type = util.getMatchType(jsonMatchDetails.result.lobby_type);
+                start_time = jsonMatchDetails.result.start_time;
 
                 for(var i = 0; i<jsonMatchDetails.result.players.length; i++) {
 
@@ -118,45 +158,43 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                     var is_dire =  isDire(currentplayer.player_slot & 128, 1);
 
                     var this_player_items = new Array();
-                    this_player_items.push(item(currentplayer.item_0,items));
-                    this_player_items.push(item(currentplayer.item_1,items));
-                    this_player_items.push(item(currentplayer.item_2,items));
-                    this_player_items.push(item(currentplayer.item_3,items));
-                    this_player_items.push(item(currentplayer.item_4,items));
-                    this_player_items.push(item(currentplayer.item_5,items));
+                    this_player_items.push(util.item(currentplayer.item_0,items));
+                    this_player_items.push(util.item(currentplayer.item_1,items));
+                    this_player_items.push(util.item(currentplayer.item_2,items));
+                    this_player_items.push(util.item(currentplayer.item_3,items));
+                    this_player_items.push(util.item(currentplayer.item_4,items));
+                    this_player_items.push(util.item(currentplayer.item_5,items));
 
                     players.push(new playerReference(this_player_slot,this__player_hero,this_player_items,this_player_kda,this_player_gold,this_player_cs,this_player_gpm,this_player_xpm,this_player_hero_dmg,this_player_tower_dmg,this_player_hero_healing,this_player_level,is_member,is_dire));
 
 
                 }
-                var details = new matchdetailsReference(players,jsonMatchDetails.result.duration, jsonMatchDetails.result.leagueid,jsonMatchDetails.result.positive_votes,jsonMatchDetails.result.negative_votes,jsonMatchDetails.picks_bans,jsonMatchDetails.result.radiant_score,jsonMatchDetails.result.dire_score);
+                details = new matchdetailsReference(players,jsonMatchDetails.result.duration, jsonMatchDetails.result.leagueid,jsonMatchDetails.result.positive_votes,jsonMatchDetails.result.negative_votes,jsonMatchDetails.result.picks_bans,jsonMatchDetails.result.radiant_score,jsonMatchDetails.result.dire_score);
                 for(var j = 0; j<details.players.length;j++){
                     if(details.players[j].is_member){
                         hero = details.players[j].hero;
                         if(!details.players[j].is_dire && jsonMatchDetails.result.radiant_win){
-                            result = "win";
+                            result_win = true;
                         }else if(details.players[j].is_dire && !jsonMatchDetails.result.radiant_win){
-                            result = "win";
+                            result_win = true;
                         }
                         else {
-                            result = "loss";
+                            result_win = false;
                         }
                         kda = details.players[j].kda;
-
+                        break;
                     }
                 }
 
-                matchObject = new matchObjectReference(hero,getMatchType(lobby_type),result,start_time,kda,details);
+                matchObject = new matchObjectReference(hero,match_type,result_win,start_time,kda,details);
 
                 callback(null,matchObject);
 
+            }else{
+                callback("status of result " + jsonMatchDetails.result.status,null);
             }
-            else{
-                callback("error",null);
-            }
-        }
-        else{
-            callback("error",null);
+        }else{
+            callback(error,null);
         }
     });
 

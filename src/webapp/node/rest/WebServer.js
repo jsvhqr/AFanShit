@@ -20,98 +20,130 @@ var bulldogHistory = new Array();
 var s4History = new Array();
 var util = require('../functions/utilFunctions');
 
-funcs.getHeros(steamkey,steamBaseUri, function(err, resheros){
-    if(err){
-        console.log(err);
+funcs.getHeros(steamkey,steamBaseUri, function(error_heroes, resulting_heros){
+    if(error_heroes){
+        console.log(error_heroes);
     }else{
-        heroes = resheros;
-        funcs.getItems(steamkey,steamBaseUri,function(err,resitems){
-            items = resitems;
-            funcs.getHistory(steamkey,steamBaseUri,heroes,items,lodaKey,function(error,data){
-                if(!err){
-                    console.log("updated Lodas matchHistory ");
-                    lodaHistory = data;
-                    console.log(data);
-                    lodaHistory.sort(util.compare);
-                    setInterval(function(){
-                        funcs.updateHistory(steamkey, steamBaseUri, heroes, items, lodaKey, function(err,data){
-                            lodaHistory.concat(data);
-                            _.uniq(lodaHistory);
-                        });
-                    },60000);
-                }
-                else{
-                    console.log(err);
-                }
-            });
-            funcs.getHistory(steamkey,steamBaseUri,heroes,items,akkeKey,function(error,data){
-                if(!err){
-                    console.log("updated Akkes matchHistory ");
-                    akkeHistory = data;
-                    console.log(data);
-                    akkeHistory.sort(util.compare);
-                    setInterval(function(){
-                        funcs.updateHistory(steamkey, steamBaseUri, heroes, items, akkeKey, function(err,data){
-                            akkeHistory.concat(data);
-                            _.uniq(akkeHistory);
-                        });
-                    },60000);
-                }
-                else{
-                    console.log(err);
-                }
-            });
-            funcs.getHistory(steamkey,steamBaseUri,heroes,items,egmKey,function(error,data){
-                if(!err){
-                    console.log("updated Egms matchHistory ");
-                    egmHistory = data;
-                    console.log(data);
-                    egmHistory.sort(util.compare);
-                    setInterval(function(){
-                        funcs.updateHistory(steamkey, steamBaseUri, heroes, items, egmKey, function(err,data){
-                            egmHistory.concat(data);
-                            _.uniq(egmHistory);
-                        });
-                    },60000);
-                }
-                else{
-                    console.log(err);
-                }
-            });
-            funcs.getHistory(steamkey,steamBaseUri,heroes,items,bulldogKey,function(error,data){
-                if(!err){
-                    console.log("updated Bulldogs matchHistory ");
-                    bulldogHistory = data;
-                    console.log(data);
-                    bulldogHistory.sort(util.compare);
-                    setInterval(function(){
-                        funcs.updateHistory(steamkey, steamBaseUri, heroes, items, bulldogKey, function(err,data){
-                            bulldogHistory.concat(data);
-                            _.uniq(bulldogHistory);
-                        });
-                    },60000);
-                }
-                else{
-                    console.log(err);
-                }
-            });
-            funcs.getHistory(steamkey,steamBaseUri,heroes,items,s4Key,function(error,data){
-                if(!err){
-                    console.log("updated s4s matchHistory ");
-                    s4History = data;
-                    console.log(data);
-                    s4History.sort(util.compare);
-                    setInterval(function(){
-                        funcs.updateHistory(steamkey, steamBaseUri, heroes, items, s4Key, function(err,data){
-                            s4History.concat(data);
-                            _.uniq(s4History);
-                        });
-                    },60000);
-                }
-                else{
-                    console.log(err);
-                }
-            });
+        heroes = resulting_heros;
+        funcs.getItems(steamkey,steamBaseUri,function(error_items,resulting_items){
+            if(!error_items){
+                items = resulting_items;
+                funcs.getHistory(steamkey,steamBaseUri,heroes,items,lodaKey,function(error_loda_history,loda_history){
+                    if(!error_loda_history){
+                        console.log("updated Lodas matchHistory ");
+                        lodaHistory = loda_history;
+                        console.log(loda_history);
+                        lodaHistory.sort(util.compare);
+                        setInterval(function(){
+                            funcs.updateHistory(steamkey, steamBaseUri, heroes, items, lodaKey, lodaHistory[0].start_time, function(error_new_loda_history,new_loda_history){
+                                if(!error_new_loda_history){
+                                    lodaHistory.concat(new_loda_history);
+                                    _.uniq(lodaHistory);
+                                    lodaHistory.sort(util.compare);
+                                }else{
+                                    console.log(error_new_loda_history);
+                                }
+                            });
+                        },60000);
+                    }
+                    else{
+                        console.log(error_loda_history);
+                    }
+                });
+                /*
+                funcs.getHistory(steamkey,steamBaseUri,heroes,items,akkeKey,function(error_akke_history,akke_history){
+                    if(!error_akke_history){
+                        console.log("updated Akkes matchHistory ");
+                        akkeHistory = akke_history;
+                        console.log(akke_history);
+                        akkeHistory.sort(util.compare);
+                        setInterval(function(){
+                            funcs.updateHistory(steamkey, steamBaseUri, heroes, items, akkeKey, akkeHistory[0].start_time, function(error_new_akke_history,new_akke_history){
+                                if(!error_new_akke_history){
+                                    akkeHistory.concat(new_akke_history);
+                                    _.uniq(akkeHistory);
+                                    akkeHistory.sort(util.compare);
+                                }else{
+                                    console.log(error_new_akke_history);
+                                }
+                            });
+                        },60000);
+                    }else{
+                        console.log(error_akke_history);
+                    }
+                });
+                funcs.getHistory(steamkey,steamBaseUri,heroes,items,egmKey,function(error_egm_history,egm_history){
+                    if(!error_egm_history){
+                        console.log("updated Egms matchHistory ");
+                        egmHistory = egm_history;
+                        console.log(egm_history);
+                        egmHistory.sort(util.compare);
+                        setInterval(function(){
+                            funcs.updateHistory(steamkey, steamBaseUri, heroes, items, egmKey, egmHistory[0].start_time, function(error_new_egm_history,new_egm_history){
+                                if(!error_new_egm_history){
+                                    egmHistory.concat(new_egm_history);
+                                    _.uniq(egmHistory);
+                                    egmHistory.sort(util.compare);
+                                }else{
+                                    console.log(error_new_egm_history);
+                                }
+                            });
+                        },60000);
+                    }
+                    else{
+                        console.log(error_egm_history);
+                    }
+                });
+                funcs.getHistory(steamkey,steamBaseUri,heroes,items,bulldogKey,function(error_bulldog_history,bulldog_history){
+                    if(!error_bulldog_history){
+                        console.log("updated Bulldogs matchHistory ");
+                        bulldogHistory = bulldog_history;
+                        console.log(bulldog_history);
+                        bulldogHistory.sort(util.compare);
+                        setInterval(function(){
+                            funcs.updateHistory(steamkey, steamBaseUri, heroes, items, bulldogKey, bulldogHistory[0].start_time, function(error_new_bulldog_history,new_bulldog_history){
+                                if(!error_new_bulldog_history){
+                                    bulldogHistory.concat(new_bulldog_history);
+                                    _.uniq(bulldogHistory);
+                                    bulldogHistory.sort(util.compare);
+                                }else{
+                                    console.log(error_new_bulldog_history);
+                                }
+                            });
+                        },60000);
+                    }
+                    else{
+                        console.log(error_bulldog_history);
+                    }
+                });
+                funcs.getHistory(steamkey,steamBaseUri,heroes,items,s4Key,function(error_s4_history,s4_history){
+                    if(!error_s4_history){
+                        console.log("updated s4s matchHistory ");
+                        s4History = s4_history;
+                        console.log(s4_history);
+                        s4History.sort(util.compare);
+                        setInterval(function(){
+                            funcs.updateHistory(steamkey, steamBaseUri, heroes, items, s4Key, s4History[0].start_time, function(error_new_s4_history,new_s4_history){
+                                if(!error_new_s4_history){
+                                    s4History.concat(new_s4_history);
+                                    _.uniq(s4History);
+                                    s4History.sort(util.compare);
+
+                                }else{
+                                    console.log(error_new_s4_history);
+                                }
+                            });
+                        },60000);
+                    }
+                    else{
+                        console.log(error_s4_history);
+                    }
+                });
+                */
+            }else{
+                console.log(error_items);
+            }
+
         });
 
     }
