@@ -19,6 +19,7 @@ var egmHistory = new Array();
 var bulldogHistory = new Array();
 var s4History = new Array();
 var util = require('../functions/utilFunctions');
+var lodash = require('lodash');
 
 funcs.getHeros(steamkey,steamBaseUri, function(error_heroes, resulting_heros){
     if(error_heroes){
@@ -38,7 +39,7 @@ funcs.getHeros(steamkey,steamBaseUri, function(error_heroes, resulting_heros){
                             funcs.updateHistory(steamkey, steamBaseUri, heroes, items, lodaKey, lodaHistory[0].start_time, function(error_new_loda_history,new_loda_history){
                                 if(!error_new_loda_history){
                                     lodaHistory.concat(new_loda_history);
-                                    _.uniq(lodaHistory);
+                                    lodash.uniq(lodaHistory);
                                     lodaHistory.sort(util.compare);
                                 }else{
                                     console.log(error_new_loda_history);
