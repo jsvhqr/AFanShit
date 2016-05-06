@@ -3,7 +3,7 @@
  */
 
 
-function MatchObject(hero, match_type, result_win, start_time, kda, details) {
+function MatchObject(hero, match_type, result_win, start_time, kda, details, match_id) {
 
     this.hero = hero;
     this.match_type = match_type;
@@ -11,6 +11,7 @@ function MatchObject(hero, match_type, result_win, start_time, kda, details) {
     this.start_time = start_time;
     this.kda = kda;
     this.details = details;
+    this.match_id = match_id;
 
 }
 

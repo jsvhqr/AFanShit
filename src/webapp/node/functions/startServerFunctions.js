@@ -80,52 +80,13 @@ var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, call
 
                 }
             }
-            console.log("response not 200");
-            if(response){
-                console.log(response.statusCode);
+            else{
+                console.log("response not 200");
+                if(response){
+                    console.log(response.statusCode);
+                }
             }
         });
-}
-
-var updateHistory = function (steamKey, steamBaseURI, heroes, items, memberkey, start_time_of_latest_match, callback) {
-
-    var newHistory = new Array();
-    var length;
-    var done = 0;
-    request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey + "&start_time=" + start_time_of_latest_match, function (error, response, body) {
-        if (!error && response && response.statusCode === 200) {
-            var jsonMatchHistory = JSON.parse(body);
-            if (jsonMatchHistory.result.status !== 15) {
-                length = jsonMatchHistory.result.matches.length;
-                for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
-                    var currentMatch = jsonMatchHistory.result.matches[i];
-                    createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,function(err,result){
-                        if(!err){
-                            done = done + 1;
-                            if(result !== null){
-                                newHistory.push(result);
-                            }
-                            console.log(result);
-                            if(length === done){
-                                callback(null,newHistory);
-                            }
-                            console.log(done);
-                        }else{
-                            done = done + 1;
-                            console.log(err);
-                            console.log(done);
-                        }
-                    })
-                }
-
-            }
-        }
-        console.log("response not 200");
-        if(response){
-            console.log(response.statusCode);
-        }
-    });
-
 }
 
 var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberkey, match_id, callback){
@@ -139,6 +100,7 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
         var result_win;
         var kda;
         var details;
+        var matchid;
 
         var players = new Array();
 
@@ -148,6 +110,7 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
 
                 match_type = util.getMatchType(jsonMatchDetails.result.lobby_type);
                 start_time = jsonMatchDetails.result.start_time;
+                matchid = match_id;
 
                 for(var i = 0; i<jsonMatchDetails.result.players.length; i++) {
 
@@ -196,7 +159,7 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                     }
                 }
 
-                matchObject = new matchObjectReference(hero,match_type,result_win,start_time,kda,details);
+                matchObject = new matchObjectReference(hero,match_type,result_win,start_time,kda,details,matchid);
 
                 callback(null,matchObject);
 
@@ -216,4 +179,3 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
 module.exports.getHeros = getHeros;
 module.exports.getHistory = getHistory;
 module.exports.getItems = getItems;
-module.exports.updateHistory = updateHistory;
