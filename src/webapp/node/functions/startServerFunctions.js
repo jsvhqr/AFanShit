@@ -80,39 +80,49 @@ var getHistory = function(steamKey, steamBaseURI, heroes, items, memberkey, call
 
                 }
             }
+            console.log("response not 200");
+            if(response){
+                console.log(response.statusCode);
+            }
         });
 }
 
 var updateHistory = function (steamKey, steamBaseURI, heroes, items, memberkey, start_time_of_latest_match, callback) {
 
-    var newMatches = new Array();
+    var newHistory = new Array();
     var length;
-
-    request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey + "&date_min=" + start_time_of_latest_match, function (error, response, body) {
-        if (!error && response.statusCode === 200) {
+    var done = 0;
+    request(steamBaseURI + "IDOTA2Match_570/GetMatchHistory/V001/?key=" + steamKey + "&account_id=" + memberkey + "&start_time=" + start_time_of_latest_match, function (error, response, body) {
+        if (!error && response && response.statusCode === 200) {
             var jsonMatchHistory = JSON.parse(body);
             if (jsonMatchHistory.result.status !== 15) {
                 length = jsonMatchHistory.result.matches.length;
                 for (var i = 0; i < jsonMatchHistory.result.matches.length; i++) {
                     var currentMatch = jsonMatchHistory.result.matches[i];
-                    createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,currentMatch.start_time,currentMatch.lobby_type,currentMatch.players,function(err,result){
+                    createMatchObject(steamKey,steamBaseURI,heroes,items,memberkey,currentMatch.match_id,function(err,result){
                         if(!err){
-                            length = length - 1;
-                            newMatches.push(result);
-                            console.log(result);
-                            if(length === 0){
-                                callback(null,newMatches);
+                            done = done + 1;
+                            if(result !== null){
+                                newHistory.push(result);
                             }
-                        }
-                        else{
-
-                            length = length - 1;
+                            console.log(result);
+                            if(length === done){
+                                callback(null,newHistory);
+                            }
+                            console.log(done);
+                        }else{
+                            done = done + 1;
                             console.log(err);
+                            console.log(done);
                         }
                     })
                 }
 
             }
+        }
+        console.log("response not 200");
+        if(response){
+            console.log(response.statusCode);
         }
     });
 
