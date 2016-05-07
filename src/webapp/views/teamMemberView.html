@@ -33,20 +33,30 @@
         <div vs-repeat id="matchesContainer" style="height: 600px; overflow:scroll;overflow-x:hidden;"
              ng-show="!memberController.detailsAvailable">
             <div ng-repeat="match in memberController.matchHistory" style="border-bottom: solid 1px white">
-                <div class="container" id="match">
-                    <div class="col-md-4">
-                        <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
-                    </div>
-                    <div class="col-md-8">
-                        <label style="color:white;">Date : {{memberController.getStartTime(match.start_time)}}</label>
-                        <label style="color:white;">Match ID : {{match.id}}</label>
-                        <a class="badge" ng-click="memberController.getmatchDetails(match.id)">match details</a>
+                <div class="container-fluid" id="match">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="http://cdn.dota2.com/apps/dota2/images/heroes/{{match.hero}}_sb.png">
+                        </div>
+                        <div class="col-md-2">
+                            <label ng-if="match.result_win" style="color:green">Win</label>
+                            <label ng-if="!match.result_win" style="color:red">Loss</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label style="color:white;">Type : {{match.match_type}}</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label style="color:white;">Date : {{memberController.getStartTime(match.start_time)}}</label>
+                        </div>
+                        <div class="col-md-2">
+                            <label>Kills / Deaths / Assists : {{match.kda}}</label>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="badge" ng-click="">match details</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div ng-show="memberController.detailsAvailable">
-            {{memberController.matchDetails}}
         </div>
     </div>
     <div class="col-md-4 text-center" id="generalCol">

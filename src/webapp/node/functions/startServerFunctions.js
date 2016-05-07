@@ -116,8 +116,8 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
 
                     var currentplayer = jsonMatchDetails.result.players[i];
 
-                    var this_player_slot = currentplayer.player_slot & 248;
-                    var this__player_hero = getHeroPlayed(currentplayer.hero_id,heroes);
+                    var this_player_slot = currentplayer.player_slot & 7;
+                    var this__player_hero = util.getHeroPlayed(currentplayer.hero_id,heroes);
                     var this_player_kda = currentplayer.kills + "/" + currentplayer.deaths + "/" + currentplayer.assists;
                     var this_player_cs = currentplayer.last_hits + "/" + currentplayer.denies;
                     var this_player_gold = currentplayer.gold;
@@ -127,8 +127,8 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                     var this_player_tower_dmg = currentplayer.tower_damage;
                     var this_player_hero_healing = currentplayer.hero_healing;
                     var this_player_level = currentplayer.level ;
-                    var is_member = isMember(memberkey,currentplayer.account_id);
-                    var is_dire =  isDire(currentplayer.player_slot & 128, 1);
+                    var is_member = util.isMember(memberkey,currentplayer.account_id);
+                    var is_dire =  util.isDire(currentplayer.player_slot & 128, 1); /TODO
 
                     var this_player_items = new Array();
                     this_player_items.push(util.item(currentplayer.item_0,items));
@@ -145,13 +145,17 @@ var createMatchObject = function(steamKey, steamBaseURI, heroes, items, memberke
                 details = new matchdetailsReference(players,jsonMatchDetails.result.duration, jsonMatchDetails.result.leagueid,jsonMatchDetails.result.positive_votes,jsonMatchDetails.result.negative_votes,jsonMatchDetails.result.picks_bans,jsonMatchDetails.result.radiant_score,jsonMatchDetails.result.dire_score);
                 for(var j = 0; j<details.players.length;j++){
                     if(details.players[j].is_member){
-                        hero = details.players[j].hero;
-                        if(!details.players[j].is_dire && jsonMatchDetails.result.radiant_win){
-                            result_win = true;
-                        }else if(details.players[j].is_dire && !jsonMatchDetails.result.radiant_win){
+                        var allianceMember = details.players[j];
+                        hero = allianceMember.hero;
+                        if(allianceMember.is_dire && jsonMatchDetails.result.radiant_win){
+                            result_win = false;
+                        }else if(allianceMember.is_dire && !jsonMatchDetails.result.radiant_win){
                             result_win = true;
                         }
-                        else {
+                        else if(!allianceMember.is_dire && jsonMatchDetails.result.radiant_win){
+                            result_win = true;
+                        }
+                        else if (!allianceMember.is_dire && !jsonMatchDetails.result.radiant_win){
                             result_win = false;
                         }
                         kda = details.players[j].kda;
